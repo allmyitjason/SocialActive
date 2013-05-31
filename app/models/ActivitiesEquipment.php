@@ -1,7 +1,5 @@
 <?php
 
-// Model:'ActivitiesEquipment' - Database Table: 'activities_equipment'
-
 Class ActivitiesEquipment extends Eloquent
 {
 

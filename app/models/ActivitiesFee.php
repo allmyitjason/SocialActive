@@ -1,8 +1,6 @@
 <?php
 
-// Model:'Activitiesfee' - Database Table: 'activitiesfees'
-
-Class Activitiesfee extends Eloquent
+Class ActivitiesFee extends Eloquent
 {
 
     protected $table='activitiesfees';

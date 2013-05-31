@@ -1,11 +1,9 @@
 <?php
 
-// Model:'Activitydiscussion' - Database Table: 'activitydiscussions'
-
-Class Activitydiscussion extends Eloquent
+Class ActivityPartcipant extends Eloquent
 {
 
-    protected $table='activitydiscussions';
+    protected $table='activitypartcipants';
 
     public function activities()
     {

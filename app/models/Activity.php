@@ -1,7 +1,5 @@
 <?php
 
-// Model:'Activity' - Database Table: 'activities'
-
 Class Activity extends Eloquent
 {
 
@@ -9,7 +7,7 @@ Class Activity extends Eloquent
 
     public function activitiesequipment()
     {
-        return belongsToMany('Activitiesequipment');
+        return $this->belongsToMany('Activitiesequipment');
     }
     public function activitiesfees()
     {
@@ -18,15 +16,15 @@ Class Activity extends Eloquent
 
     public function activitydiscussions()
     {
-        return belongsToMany('Activitydiscussion');
+        return $this->hasMany('Activitydiscussion');
     }
     public function activitypartcipants()
     {
-        return belongsToMany('Activitypartcipant');
+        return $this->hasMany('Activitypartcipant');
     }
     public function useractivityratings()
     {
-        return belongsToMany('Useractivityrating');
+        return $this->hasMany('Useractivityrating');
     }
     public function users()
     {
@@ -36,11 +34,6 @@ Class Activity extends Eloquent
     public function activitytypes()
     {
         return $this->hasMany('Activitytype');
-    }
-
-    public function userskilllevels()
-    {
-        return $this->hasMany('Userskilllevel');
     }
 
     public function userskilllevels()
