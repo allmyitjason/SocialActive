@@ -13,15 +13,13 @@
 
 Route::get('/', ['as' => 'index', function()
 {
-	//redirect to login for now
-	//return Redirect::to('login');
-	echo "123";
+	return View::make('home.index');
 }]);
 
 Route::get('/dashboard', function()
 {
-	
-	
+
+	return View::make('template.base');
 });
 
 

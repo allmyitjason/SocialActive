@@ -1,7 +1,7 @@
 @extends('template.public')
 
 @section('content')
-
+<a href='{{$facebookLogin}}'>Login with facebook</a>
 <div class="login-box">
 
 	@if(Session::has('error'))
