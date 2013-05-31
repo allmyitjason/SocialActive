@@ -15,10 +15,10 @@ class CreateActivitiesequipmentTable extends Migration
         {
             $table->engine='InnoDB';
             $table->increments('id')->unsigned();
-            $table->integer('activity_id')->nullable()->default(NULL);
-            $table->integer('equipment_id')->nullable()->default(NULL);
-            $table->integer('reqEachUser')->nullable()->default(NULL);
-            $table->integer('reqQuantity')->nullable()->default(NULL);
+            $table->integer('activity_id')->unsigned();
+            $table->integer('equipment_id')->unsigned();
+            $table->integer('reqEachUser')->nullable();
+            $table->integer('reqQuantity')->nullable();
         });
     }
 

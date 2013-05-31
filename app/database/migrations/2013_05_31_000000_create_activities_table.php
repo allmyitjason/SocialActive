@@ -15,18 +15,18 @@ class CreateActivitiesTable extends Migration
         {
             $table->engine='InnoDB';
             $table->increments('id')->unsigned();
-            $table->integer('user_id')->nullable()->default(NULL);
-            $table->integer('activityType_id')->nullable()->default(NULL);
-            $table->integer('minSkillLevel_id')->nullable()->default(NULL);
-            $table->integer('maxSkillLevel_id')->nullable()->default(NULL);
-            $table->integer('gender_id')->nullable()->default(NULL);
-            $table->integer('venue_id')->nullable()->default(NULL);
-            $table->integer('minParticipants')->nullable()->default(NULL);
-            $table->integer('maxParticipants')->nullable()->default(NULL);
-            $table->integer('minAge')->nullable()->default(NULL);
-            $table->integer('maxAge')->nullable()->default(NULL);
-            $table->('activityDate')->nullable()->default(NULL);
-            $table->integer('activityDurationMins')->nullable()->default(NULL);
+            $table->integer('user_id')->unsigned();
+            $table->integer('activityType_id')->unsigned();
+            $table->integer('minSkillLevel_id')->nullable()->unsigned();
+            $table->integer('maxSkillLevel_id')->nullable()->unsigned();
+            $table->integer('gender_id')->nullable()->unsigned();
+            $table->integer('venue_id')->unsigned();
+            $table->integer('minParticipants')->nullable();
+            $table->integer('maxParticipants')->nullable();
+            $table->integer('minAge')->nullable();
+            $table->integer('maxAge')->nullable();
+            $table->datetime('activityDate');
+            $table->integer('activityDurationMins');
         });
     }
 

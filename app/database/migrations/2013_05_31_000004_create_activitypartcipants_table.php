@@ -15,8 +15,8 @@ class CreateActivitypartcipantsTable extends Migration
         {
             $table->engine='InnoDB';
             $table->increments('id')->unsigned();
-            $table->integer('activity_id')->nullable()->default(NULL);
-            $table->integer('user_id')->nullable()->default(NULL);
+            $table->integer('activity_id')->unsigned();
+            $table->integer('user_id')->unsigned();
         });
     }
 

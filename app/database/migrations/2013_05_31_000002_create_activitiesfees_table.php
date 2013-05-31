@@ -15,8 +15,8 @@ class CreateActivitiesfeesTable extends Migration
         {
             $table->engine='InnoDB';
             $table->increments('id')->unsigned();
-            $table->integer('activity_id')->nullable()->default(NULL);
-            $table->float('fee')->nullable()->default(NULL);
+            $table->integer('activity_id')->unsigned();
+            $table->float('fee')->nullable()->default(0);
         });
     }
 

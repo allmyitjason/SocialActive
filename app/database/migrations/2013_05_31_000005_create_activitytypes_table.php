@@ -15,8 +15,8 @@ class CreateActivitytypesTable extends Migration
         {
             $table->engine='InnoDB';
             $table->increments('id')->unsigned();
-            $table->string('type', 100)->nullable()->default(NULL);
-            $table->text('description')->nullable()->default(NULL);
+            $table->string('type', 100);
+            $table->text('description')->nullable();
         });
     }
 
