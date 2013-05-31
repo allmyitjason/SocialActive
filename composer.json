@@ -1,6 +1,15 @@
 {
 	"require": {
-		"laravel/framework": "4.0.*"
+		"laravel/framework": "4.0.*",
+		"anahkiasen/former": "dev-agnostic",
+		"loic-sharma/profiler": "1.0.*",
+		"way/generators": "dev-master",
+		"allmyit/router": "dev-master",
+		"allmyit/model": "dev-master",
+		"codeception/codeception" : "@stable",
+		"pdepend/pdepend": "dev-master",
+		"phpmd/phpmd": "dev-master",
+		"facebook/php-sdk": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -12,6 +21,30 @@
 			"app/tests/TestCase.php"
 		]
 	},
+	"repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "google/google-api-php-client",
+                "version": "0.6.0",
+                "dist": {
+                    "url": "http://google-api-php-client.googlecode.com/files/google-api-php-client-0.6.0.tar.gz",
+                    "type": "tar"
+                },
+                "autoload": {
+                    "classmap": ["src/"]
+                }
+            }
+        },
+        {
+            	"type": "vcs",
+            	"url":  "git@bitbucket.org:allmyit/router.git"
+        },
+        {
+            	"type": "vcs",
+            	"url":  "git@bitbucket.org:allmyit/model.git"
+        }
+    ],
 	"scripts": {
 		"pre-update-cmd": [
 			"php artisan clear-compiled"
