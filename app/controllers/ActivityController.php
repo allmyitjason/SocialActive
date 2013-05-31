@@ -21,9 +21,9 @@ class ActivityController extends \BaseController {
      */
     public function index()
     {
-        $activitys = $this->activity->all();
+        $activities = $this->activity->all();
 
-        return View::make('activitys.index', compact('activitys'));
+        return View::make('activities.index', compact('activities'));
     }
 
     /**
@@ -33,7 +33,7 @@ class ActivityController extends \BaseController {
      */
     public function create()
     {
-        return View::make('activitys.create');
+        return View::make('activities.create');
     }
 
     /**
@@ -50,10 +50,10 @@ class ActivityController extends \BaseController {
         {
             $this->activity->create($input);
 
-            return Redirect::route('activitys.index');
+            return Redirect::route('activities.index');
         }
 
-        return Redirect::route('activitys.create')
+        return Redirect::route('activities.create')
             ->withInput()
             ->withErrors($validation)
             ->with('message', 'There were validation errors.');
@@ -69,7 +69,7 @@ class ActivityController extends \BaseController {
     {
         $activity = $this->activity->findOrFail($id);
 
-        return View::make('activitys.show', compact('activity'));
+        return View::make('activities.show', compact('activity'));
     }
 
     /**
@@ -84,10 +84,10 @@ class ActivityController extends \BaseController {
 
         if (is_null($activity))
         {
-            return Redirect::route('activitys.index');
+            return Redirect::route('activities.index');
         }
 
-        return View::make('activitys.edit', compact('activity'));
+        return View::make('activities.edit', compact('activity'));
     }
 
     /**
@@ -106,10 +106,10 @@ class ActivityController extends \BaseController {
             $activity = $this->activity->find($id);
             $activity->update($input);
 
-            return Redirect::route('activitys.show', $id);
+            return Redirect::route('activities.show', $id);
         }
 
-        return Redirect::route('activitys.edit', $id)
+        return Redirect::route('activities.edit', $id)
             ->withInput()
             ->withErrors($validation)
             ->with('message', 'There were validation errors.');
@@ -125,7 +125,7 @@ class ActivityController extends \BaseController {
     {
         $this->activity->find($id)->delete();
 
-        return Redirect::route('activitys.index');
+        return Redirect::route('activities.index');
     }
 
 }
