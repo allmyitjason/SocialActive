@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('phone', 45)->nullable();
             $table->string('mobile', 45)->nullable();
             $table->string('facebookId', 45)->nullable();
+            $table->timestamps();
         });
     }
 

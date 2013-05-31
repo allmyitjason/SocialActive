@@ -14,8 +14,15 @@
 Route::get('/', ['as' => 'index', function()
 {
 	//redirect to login for now
-	return Redirect::to('login');
+	//return Redirect::to('login');
+	echo "123";
 }]);
+
+Route::get('/dashboard', function()
+{
+	
+	
+});
 
 
 // Authentication
@@ -31,7 +38,7 @@ Route::post('/password/reset/{token}', ['uses' => 'AuthController@postPasswordRe
 
 //Registeration
 Route::get('/register', ['as' => 'register', 'uses' => 'UserController@getRegister']);
-Route::post('/register', ['uses' => 'UserController@postRegister']);
+Route::post('/register', ['uses' => 'UserController@store']);
 
 // Auth protected routes
 Route::group(array('before' => 'auth'), function()

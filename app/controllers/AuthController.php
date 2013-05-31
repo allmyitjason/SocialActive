@@ -8,7 +8,7 @@ class AuthController extends SportBaseController {
 
 	public function __construct()
 	{
-		$this->facebook = new \Facebook(
+		$this->facebook = new Facebook(
 			array(
 				'appId' => '169060389929087',
 				'secret' => 'ec54365b698881ba8489683562bc0498',
@@ -31,16 +31,18 @@ class AuthController extends SportBaseController {
 			//if we do then log them in localy and redirect to dashboard
 			//otherwise we will send them to the registration form
 
-			$localUser = \User::where('facebookId', '=', $facebookId)->first(['id']);
+			$localUser = User::where('facebookId', '=', $facebookId)->first(['id']);
 
 			if ($localUser) {
 				Auth::loginUsingId($localUser->id);
 				return Redirect::to('/dashboard');
 			}
 
+			//Store the facebook id in the sessoin so we can get it from the registration form
+			Session::put('facebookId', $facebookId);
+
 			//We don't have a local record for this user, send them to the registration form
-			return Redirect::to('/register')
-				->with('facebookId', $facebookId);
+			return Redirect::to('/register');
 
 			try {
 				// Proceed knowing you have a logged in user who's authenticated.
@@ -54,7 +56,7 @@ class AuthController extends SportBaseController {
 
 		//Return normal login form
 		return View::make('auth.login')
-			->with('facebookLogin', $this->facebook->getLoginUrl());
+			->with('facebookLogin', $this->facebook->getLoginUrl(array('redirect_uri' => 'http://localhost:8000/login')));
 	}
 
 	public function postLogin()

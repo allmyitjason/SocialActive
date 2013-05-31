@@ -18,8 +18,8 @@
             {{Former::password('password_confirmation')}}
             {{Former::submit()}}
             {{ link_to_route('index', 'Cancel',[],['class' => 'btn btn-primary']) }}
-            @if (isset($facebookId))
-                {{Former::hidden()}}
+            @if (Session::has('facebookId'))
+                {{Former::hidden('facebookId', Session::get('facebookId'))}}
             @endif
             {{Former::close()}}
            

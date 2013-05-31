@@ -9,15 +9,8 @@ class UserController extends SportBaseController
 
     public function getRegister()
     {
-    	return \View::make('users.register');
+    	return View::make('users.register');
     }
-
-    public function postRegister()
-    {
-    	parent::store();
-    }
-
-    // Overwrite store and update methods based on extra things we need to do for a user
 
     /**
      * Store a newly created resource in storage.
@@ -26,9 +19,24 @@ class UserController extends SportBaseController
      */
     public function store($input = null)
     {
-        //validation needs to be performed here
-        $input = array_except(Input::all(), ['password_confirmation', 'codeception_added_auto_submit']);
-        return parent::store($input);
+        if (is_null($input)) {
+             $input = array_except(Input::all(), ['password_confirmation', 'codeception_added_auto_submit']);
+        }
+
+        $obj = $this->repository->create($input);
+        
+        if ($obj->save())
+        {
+            //Login the user
+            Auth::loginUsingId($obj->id);
+
+            return Redirect::to('/dashboard');
+        }
+
+        return Redirect::route($this->routename.'.create')
+            ->withInput()
+            ->withErrors($obj->errors())
+            ->with('message', 'There were validation errors.');
     }
 
     /**

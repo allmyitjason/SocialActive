@@ -116,8 +116,6 @@ return array(
 		'Former\FormerServiceProvider',
 		'Profiler\ProfilerServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
-		'AllMyIt\Router\RouterServiceProvider'
-
 	),
 
 	/*
@@ -182,11 +180,9 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-		'Former' => 'Former\Facades\Illuminate',
+		'Former' 		  => 'Former\Facades\Illuminate',
 		'Profiler'		  => 'Profiler\Facades\Profiler',
-		'Ardent'		  => 'LaravelBook\Ardent\Ardent',
-		'BaseModel'		  => 'AllMyIt\Model\BaseModel'
-
+		'Ardent'		  => 'LaravelBook\Ardent\Ardent'
 	),
 
 );
