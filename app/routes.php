@@ -16,11 +16,7 @@ Route::get('/', ['as' => 'index', function()
 	return View::make('home.index');
 }]);
 
-Route::get('/dashboard', function()
-{
 
-	return View::make('template.base');
-});
 
 
 // Authentication
@@ -41,7 +37,9 @@ Route::post('/register', ['uses' => 'UserController@store']);
 // Auth protected routes
 Route::group(array('before' => 'auth'), function()
 {
-	Route::get('/dashboard', ['as' => 'dashboard',function(){
-		return View::make('dashboard');
-	}]);
+
+	Route::get('/dashboard', function()
+	{
+		return View::make('template.base');
+	});
 });

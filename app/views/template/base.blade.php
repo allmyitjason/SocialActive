@@ -111,52 +111,14 @@
               <ul>
 
                 <li><a href="index.html" class="blightblue"> <i class="icon-home"></i> Home</a></li>
-
                 <!-- Main navigation -->
-                <li><a href="#" rel="ddsubmenu2" class="bred"> <i class="icon-desktop"></i> Pages</a>
-                    <!-- Sub Navigation -->
-                    <ul id="ddsubmenu2" class="ddsubmenustyle">
-                       <li><a href="landingpage.html">Landing Page</a></li>
-                       <li><a href="comingsoon.html">Coming Soon</a></li>
-                       <li><a href="features2.html">Features</a></li>
-                       <li><a href="service1.html">Service</a></li>
-                       <li><a href="team.html">Our Team</a></li>
-                       <li><a href="aboutus.html">About Us</a></li>
-                       <li><a href="resume.html">Resume</a></li>
-                       <li><a href="tasks.html">Tasks</a></li>
-                       <li><a href="#">Sub Navigation</a>
-                          <ul>
-                            <li><a href="#">Nav Level #3</a></li>
-                          </ul>
-                       </li>
-                    </ul>
-                </li>
-
+                <li><a href="#" rel="ddsubmenu2" class="bred"> <i class="icon-desktop"></i> Find</a></li>
                 <!-- Main navigation -->
-                <li><a href="#" rel="ddsubmenu2" class="bviolet"> <i class="icon-tablet"></i> Pages</a>
-                    <!-- Sub Navigation -->
-                    <ul id="ddsubmenu2" class="ddsubmenustyle">
-                       <li><a href="404.html">404</a></li>
-                       <li><a href="testimonials.html">Testimonials</a></li>
-                       <li><a href="clients.html">Clients</a></li>
-                       <li><a href="pricingtable.html">Pricing Table</a></li>
-                       <li><a href="projects.html">Projects</a></li>
-                       <li><a href="register.html">Register</a></li>
-                       <li><a href="login.html">Login</a></li>
-                       <li><a href="events.html">Events</a></li>
-                    </ul>
-                </li>                
+                <li><a href="#" rel="ddsubmenu2" class="bviolet"> <i class="icon-tablet"></i> Host</a></li>                
 
-                <li><a href="#" rel="ddsubmenu2" class="bgreen"> <i class="icon-comments"></i> Blog</a>
-                  <!-- Sub navigation -->
-                  <ul id="ddsubmenu2" class="ddsubmenustyle">
-                    <li><a href="blog2.html">Blog #1</a></li>
-                    <li><a href="blog1.html">Blog #2</a></li>
-                    <li><a href="blogsingle.html">Blog Single</a></li>
-                  </ul>
-                </li>
+                <li><a href="#" rel="ddsubmenu2" class="bgreen"> <i class="icon-comments"></i> Login</a></li>
 
-                <li><a href="portfolio.html" class="borange"> <i class="icon-camera"></i> Portfolio</a></li>
+                <li><a href="portfolio.html" class="borange"> <i class="icon-camera"></i> About</a></li>
 
                 <li><a href="contactus.html" class="bblue"> <i class="icon-envelope-alt"></i> Contact</a></li>
 
