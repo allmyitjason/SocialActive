@@ -1,8 +1,6 @@
-<?php namespace AllMyIt;
+<?php 
 
-use \View, \Input, \Validator, \Redirect;
-
-class BaseController extends \BaseController
+class SportBaseController extends BaseController
 {
 	protected $repository;
 	protected $routename;

@@ -19,15 +19,15 @@ Route::get('/', ['as' => 'index', function()
 
 
 // Authentication
-Route::get('/login', ['as' => 'login', 'uses' => 'AllMyIt\AuthController@getLogin']);
-Route::post('/login', ['uses' => 'AllMyIt\AuthController@postLogin']);
-Route::get('/logout', ['as' => 'logout', 'uses' => 'AllMyIt\AuthController@getLogout']);
+Route::get('/login', ['as' => 'login', 'uses' => 'AuthController@getLogin']);
+Route::post('/login', ['uses' => 'AuthController@postLogin']);
+Route::get('/logout', ['as' => 'logout', 'uses' => 'AuthController@getLogout']);
 
 // Password Reset
-Route::get('/password/remind', ['as' => 'passwordreset', 'uses' => 'AllMyIt\AuthController@getPasswordRemind']);
-Route::post('/password/remind', ['uses' => 'AllMyIt\AuthController@postPasswordRemind']);
-Route::get('/password/reset/{token}', ['as' => 'passwordremind', 'uses' => 'AllMyIt\AuthController@getPasswordReset']);
-Route::post('/password/reset/{token}', ['uses' => 'AllMyIt\AuthController@postPasswordReset']);
+Route::get('/password/remind', ['as' => 'passwordreset', 'uses' => 'AuthController@getPasswordRemind']);
+Route::post('/password/remind', ['uses' => 'AuthController@postPasswordRemind']);
+Route::get('/password/reset/{token}', ['as' => 'passwordremind', 'uses' => 'AuthController@getPasswordReset']);
+Route::post('/password/reset/{token}', ['uses' => 'AuthController@postPasswordReset']);
 
 //Registeration
 Route::get('/register', ['as' => 'register', 'uses' => 'UserController@getRegister']);

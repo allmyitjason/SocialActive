@@ -114,6 +114,9 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Former\FormerServiceProvider',
+		'Profiler\ProfilerServiceProvider',
+		'Way\Generators\GeneratorsServiceProvider',
+		'AllMyIt\Router\RouterServiceProvider'
 
 	),
 
@@ -180,6 +183,9 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Former' => 'Former\Facades\Illuminate',
+		'Profiler'		  => 'Profiler\Facades\Profiler',
+		'Ardent'		  => 'LaravelBook\Ardent\Ardent',
+		'BaseModel'		  => 'AllMyIt\Model\BaseModel'
 
 	),
 

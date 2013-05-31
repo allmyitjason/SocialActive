@@ -1,7 +1,6 @@
-<?php namespace AllMyIt;
+<?php 
 
-use \View, \Redirect, \Input, \Auth, \Password, \Hash;
-class AuthController extends BaseController {
+class AuthController extends SportBaseController {
 
 	public $restful = true;
 
