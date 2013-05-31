@@ -42,4 +42,6 @@ Route::group(array('before' => 'auth'), function()
 	{
 		return View::make('template.base');
 	});
+
+	Route::resource('activity', 'ActivityController');
 });
