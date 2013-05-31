@@ -11,53 +11,11 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/', ['as' => 'index', function()
 {
-	
-	$facebook = new Facebook(
-			array(
-				'appId' => '169060389929087',
-				'secret' => 'ec54365b698881ba8489683562bc0498',
-			)
-		);
-
-               $user = $facebook->getUser();
-
-               if ($user != 0) {
-
-				  try {
-				    // Proceed knowing you have a logged in user who's authenticated.
-				    $user_profile = $facebook->api('/me');
-				    print_r($user_profile);
-				  } catch (FacebookApiException $e) {
-				    var_dump($e);
-				    $user = null;
-				  }
-				}
-				//var_dump( $user_profile);
-               var_dump($user);
-
-    return View::make('hello')
-    	->with('user', $user)
-    	->with('facebook', $facebook);
-
-});
-
-Route::get('/logout', function() {
-
-
-	$facebook = new Facebook(
-			array(
-				'appId' => '169060389929087',
-				'secret' => 'ec54365b698881ba8489683562bc0498',
-			)
-		);
-	
-	$facebook->destroySession();
-session_destroy();
-
-return Redirect::to('/');
-});
+	//redirect to login for now
+	return Redirect::to('login');
+}]);
 
 
 // Authentication
@@ -71,15 +29,14 @@ Route::post('/password/remind', ['uses' => 'AllMyIt\AuthController@postPasswordR
 Route::get('/password/reset/{token}', ['as' => 'passwordremind', 'uses' => 'AllMyIt\AuthController@getPasswordReset']);
 Route::post('/password/reset/{token}', ['uses' => 'AllMyIt\AuthController@postPasswordReset']);
 
+//Registeration
+Route::get('/register', ['as' => 'register', 'uses' => 'UserController@getRegister']);
+Route::post('/register', ['uses' => 'UserController@postRegister']);
+
 // Auth protected routes
 Route::group(array('before' => 'auth'), function()
 {
-
 	Route::get('/dashboard', ['as' => 'dashboard',function(){
 		return View::make('dashboard');
 	}]);
-
-	
-	Route::controller('calendar', 'Peracto\CalendarController');
-	
 });
