@@ -108,3 +108,19 @@ $(".navi a").each(function() {
 $(".navis select").change(function() {
   window.location = $(this).find("option:selected").val();
 });
+
+
+
+
+//Sport
+
+$( ".sliderRange" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 192, 470 ],
+      slide: function( event, ui ) {
+        $( ".sliderRangeLabel" ).html( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+
