@@ -1,0 +1,8 @@
+/vendor
+composer.phar
+composer.lock
+.DS_Store
+*.sqlite
+/tests/_log
+/bootstrap/compiled.php
+/storage/uploads
