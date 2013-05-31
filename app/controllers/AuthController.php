@@ -62,10 +62,10 @@ class AuthController extends SportBaseController {
 	public function postLogin()
 	{
 		$input = Input::only('email', 'password');
-
+		
 		if(Auth::attempt($input, true))
 		{
-			return Redirect::intended('trials');
+			return Redirect::intended('/dashbaord');
 		}
 
 		return Redirect::route('login')->with('error','Incorrect username or password');
