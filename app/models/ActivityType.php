@@ -4,9 +4,9 @@ Class ActivityType extends Eloquent
 {
     protected $table='activitytypes';
 
-    public function activities()
+    public function equipment()
     {
-        return $this->hasOne('Activity');
+        return $this->belongsToMany('Equipment');
     }
 
     public function userskilllevels()

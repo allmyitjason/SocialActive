@@ -17,6 +17,14 @@ Route::get('/', ['as' => 'index', function()
 }]);
 
 
+Route::get('test', ['as' => 'index', function()
+{
+	
+}]);
+
+
+
+
 
 
 // Authentication
@@ -38,10 +46,16 @@ Route::post('/register', ['uses' => 'UserController@store']);
 Route::group(array('before' => 'auth'), function()
 {
 
+    /**
+     * Ajax requests
+     */
+    Route::get('/activitytype/{id}/equipment', 'ActivityTypeController@getEquipment');
+
 	Route::get('/dashboard', function()
 	{
 		return View::make('template.base');
 	});
 
 	Route::resource('activity', 'ActivityController');
+    Route::resource('activitytype', 'ActivityTypeController');
 });

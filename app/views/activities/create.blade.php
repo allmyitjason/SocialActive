@@ -6,6 +6,15 @@ $( "#slider" ).slider({
             values: [ 1, 5 ]
         });
 
+$("#activityType_id").change(function() {
+    $('#equipment').html('');
+   $.get('/activitytype/'+$(this).val()+'/equipment', function(data) {
+        $.each(data, function(k, v) {
+            $('#equipment').append('<option value="'+v.id+'">'+v.equipName+'</option>')
+        })
+    });
+});
+
 @stop
 
 @section('content')
@@ -17,6 +26,7 @@ $( "#slider" ).slider({
         <div class="box-content">
             {{Former::open()}}
             {{Former::select('activityType_id', 'Type')->fromQuery(ActivityType::all(), 'type')->placeholder('Select')}}
+            {{Former::select('equipment', 'Select Equipment', null, null, ['multiple'])}}
             {{Former::select('minSkillLevel_id', 'Type')->fromQuery(ActivityType::all(), 'type')->placeholder('Select')}}
 
              <td>

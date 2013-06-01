@@ -1,17 +1,19 @@
 <?php
 
-class ActivityController extends \BaseController {
+class ActivityTypeController extends \BaseController {
 
 	/**
-     * Activity Repository
+     * ActivityType Repository
      *
-     * @var Activity
+     * @var ActivityType
      */
-    protected $activity;
+    protected $activityType;
 
-    public function __construct(Activity $activity)
+    public $restfull = true;
+
+    public function __construct(ActivityType $activityType)
     {
-        $this->activity = $activity;
+        $this->activityType = $activityType;
     }
 
     /**
@@ -21,7 +23,7 @@ class ActivityController extends \BaseController {
      */
     public function index()
     {
-        $activities = $this->activity->all();
+        $activities = $this->activityType->all();
 
         return View::make('activities.index', compact('activities'));
     }
@@ -44,11 +46,11 @@ class ActivityController extends \BaseController {
     public function store()
     {
         $input = Input::all();
-        $validation = Validator::make($input, Activity::$rules);
+        $validation = Validator::make($input, ActivityType::$rules);
 
         if ($validation->passes())
         {
-            $this->activity->create($input);
+            $this->activityType->create($input);
 
             return Redirect::route('activities.index');
         }
@@ -67,9 +69,9 @@ class ActivityController extends \BaseController {
      */
     public function show($id)
     {
-        $activity = $this->activity->findOrFail($id);
+        $activityType = $this->activityType->findOrFail($id);
 
-        return View::make('activities.show', compact('activity'));
+        return View::make('activities.show', compact('activityType'));
     }
 
     /**
@@ -80,14 +82,14 @@ class ActivityController extends \BaseController {
      */
     public function edit($id)
     {
-        $activity = $this->activity->find($id);
+        $activityType = $this->activityType->find($id);
 
-        if (is_null($activity))
+        if (is_null($$activityType))
         {
             return Redirect::route('activities.index');
         }
 
-        return View::make('activities.edit', compact('activity'));
+        return View::make('activities.edit', compact('activityType'));
     }
 
     /**
@@ -99,12 +101,12 @@ class ActivityController extends \BaseController {
     public function update($id)
     {
         $input = array_except(Input::all(), '_method');
-        $validation = Validator::make($input, Activity::$rules);
+        $validation = Validator::make($input, ActivityType::$rules);
 
         if ($validation->passes())
         {
-            $activity = $this->activity->find($id);
-            $activity->update($input);
+            $activityType = $this->activityType->find($id);
+            $activityType->update($input);
 
             return Redirect::route('activities.show', $id);
         }
@@ -123,7 +125,7 @@ class ActivityController extends \BaseController {
      */
     public function destroy($id)
     {
-        $this->activity->find($id)->delete();
+        $this->activityType->find($id)->delete();
 
         return Redirect::route('activities.index');
     }
@@ -132,11 +134,15 @@ class ActivityController extends \BaseController {
     /**
      * Return json data of equipment for this acitiviy
      */
-    public function getAjaxEquipment($activityType)
+    public function getEquipment($id)
     {
-        $type = ActivityType::with('equipment')->where('id', '=', $activityType);
+        $type = $this->activityType->find($id);
 
-        return $type;
+        //return Form::select('size', array('L' => 'Large', 'M' => 'Medium', 'S' => 'Small'), array('S', 'M'), array('multiple'));
+        if ($type) {
+            //$data = Former::select('equipment', null, null, null, array('multiple'))->fromQuery($type->equipment()->get(), 'equipName', 'equipment.id');
+            return $type->equipment()->get(['equipName', 'equipment.id']);
+        }
     }
 
 }
