@@ -43,6 +43,17 @@ class GenericTableSeeder extends Seeder {
             ['levelNo' => 5, 'levelDescription' => 'Pro' ]
 
         ]);
+
+
+        DB::table('genders')->insert([
+            ['gender' => 'Male'],
+            ['gender' => 'Female'],
+            ['gender' => 'Mixed'] 
+        ]);
+
+        DB::table('venues')->insert([
+            ['name' => 'Oval (North Tce)', 'address' => '123 Fake St']
+        ]);
        
 
 

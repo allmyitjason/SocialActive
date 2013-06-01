@@ -15,14 +15,14 @@ class CreateVenuesTable extends Migration
         {
             $table->engine='InnoDB';
             $table->increments('id')->unsigned();
-            $table->string('venueName', 255)->nullable()->default(NULL);
-            $table->string('address', 255)->nullable()->default(NULL);
-            $table->decimal('longitude', 9, 6)->nullable()->default(NULL);
-            $table->decimal('latitude', 9, 6)->nullable()->default(NULL);
-            $table->integer('suburb_id')->nullable()->default(NULL);
-            $table->string('phone', 45)->nullable()->default(NULL);
-            $table->string('contactName', 45)->nullable()->default(NULL);
-            $table->integer('verified')->nullable()->default(NULL);
+            $table->string('name', 255);
+            $table->string('address', 255);
+            $table->decimal('longitude', 9, 6);
+            $table->decimal('latitude', 9, 6);
+            $table->integer('suburb_id')->unsigned();
+            $table->string('phone', 45);
+            $table->string('contactName', 45);
+            $table->integer('verified');
         });
     }
 

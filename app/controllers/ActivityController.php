@@ -62,7 +62,6 @@ class ActivityController extends \BaseController {
                     }
                 }
             }
-            die;
 
             return Redirect::route('activity.index');
         }

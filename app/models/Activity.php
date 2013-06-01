@@ -36,27 +36,6 @@ Class Activity extends Eloquent
     {
         return $this->belongsToMany('ActivityEquipment');
     }
-    public function activitiesfees()
-    {
-        return $this->hasOne('Activitiesfee');
-    }
-
-    public function activitydiscussions()
-    {
-        return $this->hasMany('Activitydiscussion');
-    }
-    public function activitypartcipants()
-    {
-        return $this->hasMany('Activitypartcipant');
-    }
-    public function useractivityratings()
-    {
-        return $this->hasMany('Useractivityrating');
-    }
-    public function users()
-    {
-        return $this->hasMany('User');
-    }
 
     public function activitytypes()
     {
@@ -68,14 +47,39 @@ Class Activity extends Eloquent
         return $this->hasMany('Userskilllevel');
     }
 
-    public function genders()
-    {
-        return $this->hasMany('Gender');
-    }
-
     public function venues()
     {
         return $this->hasMany('Venue');
+    }
+
+    public function host()
+    {
+        return $this->belongsTo('User', 'user_id');
+    }
+
+    public function type()
+    {
+        return $this->belongsTo('ActivityType', 'activityType_id');
+    }
+
+    public function minSkillLevel()
+    {
+        return $this->belongsTo('Skilllevel', 'minSkillLevel_id');
+    }
+
+    public function maxSkillLevel()
+    {
+        return $this->belongsTo('Skilllevel', 'maxSkillLevel_id');
+    }
+
+    public function gender()
+    {
+        return $this->belongsTo('Gender', 'gender_id');
+    }
+
+    public function venue()
+    {
+        return $this->belongsTo('Venue', 'venue_id');
     }
 
 }

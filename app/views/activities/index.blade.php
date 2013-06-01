@@ -30,15 +30,15 @@
                 <tbody>
                     @foreach ($activities as $activity)
                     <tr>
-                        <td>{{$activity->host}}</td>
-                        <td>{{ $activity->type }}</td>
-                        <td>{{ $activity->minSkillLevel }} - {{$activity->maxSkillLevel}}</td>
-                        <td>{{ $activity->gender }}</td>
-                        <td>{{ $activity->venue }}</td>
-                        <td>{{ $activity->minParticipants }}{{ $activity->maxParticipants }}</td>
-                        <td>{{ $activity->minAge }}{{ $activity->maxAge }}</td>
-                        <td>{{$activity->activityDate}}</td>
-                        <td>{{$activity->activityDurationMins}}</td>
+                        <td>{{$activity->host->firstName}} {{$activity->host->surname}}</td>
+                        <td>{{ $activity->type->type }}</td>
+                        <td>{{ $activity->minSkillLevel->levelNo }} ({{ $activity->minSkillLevel->levelDescription }}) to {{$activity->maxSkillLevel->levelNo}} ({{ $activity->maxSkillLevel->levelDescription }})</td>
+                        <td>{{ $activity->gender->gender }}</td>
+                        <td>{{ $activity->venue->name }}</td>
+                        <td>{{ $activity->minParticipants }} to {{ $activity->maxParticipants }} People</td>
+                        <td>{{ $activity->minAge }} to {{ $activity->maxAge }}</td>
+                        <td>{{date('d/m/Y', strtotime($activity->activityDate));}}</td>
+                        <td>{{$activity->activityDurationMins}} Minutes ({{$activity->activityDurationMins/60}} Hours)</td>
                     </tr>
                     @endforeach
                 </tbody>

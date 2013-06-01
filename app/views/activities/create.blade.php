@@ -89,8 +89,8 @@ $("#activityType_id").change(function() {
             {{Former::open('/activity')->id('create_activity')}}
             {{Former::select('activityType_id', 'Type')->fromQuery(ActivityType::all(), 'type')->placeholder('Select')}}
             {{Former::select('equipment[]', 'Select Equipment', null, null, ['multiple'])->id('equipment')}}
-            {{Former::select('gender_id', 'Gender', ['1' => 'Male', '2' => 'Female', '3' => 'Mixed'])->value(3)}}
-            {{Former::select('venue_id', 'Venue', ['1' => 'Male', '2' => 'Female', '3' => 'Mixed'])->value(3)}}
+            {{Former::select('gender_id', 'Gender')->fromQuery(Gender::all(), 'gender', 'id')->value(3)}}
+            {{Former::select('venue_id', 'Venue')->fromQuery(Venue::all(), 'name', 'id')->placeholder('Select')}}
             
             <div class="control-group">
                 <label class="control-label">Skill Level</label>
