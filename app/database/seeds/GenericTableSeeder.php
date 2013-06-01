@@ -16,9 +16,9 @@ class GenericTableSeeder extends Seeder {
 
 
         DB::table('activitytypes')->insert([
-        	['type' => 'Cricket', 'description' => 'Indoor Cricket'],
-        	['type' => 'Tennis', 'description' => ''],
-        	['type' => 'Fishing', 'description' => 'Jetty'],
+        	['type' => 'Cricket', 'description' => 'Indoor Cricket', 'icon' => 'cricket.png'],
+        	['type' => 'Tennis', 'description' => '', 'icon' => 'tennis.png'],
+        	['type' => 'Fishing', 'description' => 'Jetty', 'icon' => 'fishing.png'],
         ]);
 
         //Add default equipment links
@@ -52,7 +52,8 @@ class GenericTableSeeder extends Seeder {
         ]);
 
         DB::table('venues')->insert([
-            ['name' => 'Oval (North Tce)', 'address' => '123 Fake St']
+            ['name' => 'Oval (North Tce)', 'address' => '123 Fake St', 'longitude' => -34.925806, 'latitude' => 138.605073],
+            ['name' => 'Oval (Pirie St)', 'address' => '123 Fake St', 'longitude' => -34.925303, 'latitude' => 138.607296]
         ]);
 
         DB::table('suburbs')->insert([
@@ -65,10 +66,26 @@ class GenericTableSeeder extends Seeder {
         ]);
 
         DB::table('activities')->insert([
-            ['user_id' => 1, 'activityType_id' => 1, 'minSkillLevel_id' => 2, 'maxSkillLevel_id' => 5, 'gender_id' => 3, 'venue_id' => 1, 'minParticipants' => 4, 'maxParticipants' => 7, 'minAge' => 5, 'maxAge' => 90, 'activityDate' => '2013-06-01', 'activityDurationMins' => 60]
+            ['title' => 'Cricket', 'user_id' => 1, 'activityType_id' => 1, 'minSkillLevel_id' => 2, 'maxSkillLevel_id' => 5, 'gender_id' => 3, 'venue_id' => 1, 'minParticipants' => 4, 'maxParticipants' => 7, 'minAge' => 5, 'maxAge' => 90, 'activityDate' => '2013-06-01', 'activityDurationMins' => 60],
+            ['title' => 'Social Tennis Match', 'user_id' => 1, 'activityType_id' => 1, 'minSkillLevel_id' => 2, 'maxSkillLevel_id' => 5, 'gender_id' => 3, 'venue_id' => 2, 'minParticipants' => 4, 'maxParticipants' => 7, 'minAge' => 5, 'maxAge' => 90, 'activityDate' => '2013-06-01', 'activityDurationMins' => 60]
         ]);
        
 
+        /**
+         * Import all suburbs
+         */
+         $row = 1;
+        if (($handle = fopen("app/storage/pc-full_20121129.csv", "r")) !== FALSE) {
+            while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                $row++;
+                $sub = new Suburb();
+                $sub->name = $data[1];
+                $sub->postcode = $data[0];
+                $sub->state = $data[2];
+                $sub->save();
+            }
+            fclose($handle);
+        }
 
         
     }

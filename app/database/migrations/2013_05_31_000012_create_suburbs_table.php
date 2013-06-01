@@ -18,6 +18,7 @@ class CreateSuburbsTable extends Migration
             $table->string('name', 100);
             $table->integer('postcode');
             $table->string('state', 3);
+            $table->timestamps();
         });
     }
 
