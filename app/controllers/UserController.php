@@ -23,6 +23,7 @@ class UserController extends SportBaseController
              $input = array_except(Input::all(), ['password_confirmation', 'codeception_added_auto_submit']);
         }
 
+        
         $obj = $this->repository->create($input);
         
         if ($obj->save())

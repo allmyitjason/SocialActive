@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('surname', 100);
             $table->string('street', 255)->nullable();
             $table->string('email', 100);
-            $table->string('password', 45);
+            $table->string('password', 100);
             $table->date('dob')->nullable();
             $table->string('phone', 45)->nullable();
             $table->string('mobile', 45)->nullable();

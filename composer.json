@@ -5,7 +5,6 @@
 		"loic-sharma/profiler": "1.0.*",
 		"way/generators": "dev-master",
 		"allmyit/router": "dev-master",
-		"allmyit/model": "dev-master",
 		"codeception/codeception" : "@stable",
 		"pdepend/pdepend": "dev-master",
 		"phpmd/phpmd": "dev-master",
@@ -40,10 +39,6 @@
         {
             	"type": "vcs",
             	"url":  "git@bitbucket.org:allmyit/router.git"
-        },
-        {
-            	"type": "vcs",
-            	"url":  "git@bitbucket.org:allmyit/model.git"
         }
     ],
 	"scripts": {

@@ -5,8 +5,6 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
-	protected $guarded = array();
-
 	/**
 	 * The database table used by the model.
 	 *
@@ -56,12 +54,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	* @param string
 	* @return null
 	*/
-	public function setPasswordAttribute($password)
+	/*public function setPasswordAttribute($password)
 	{
 		$this->attributes['password'] = Hash::make($password);
-	}
+	}*/
 
-	public function activities()
+	/*public function activities()
     {
         return $this->hasOne('Activity');
     }
@@ -107,5 +105,5 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     {
         return $this->hasMany('Gender');
     }
-
+*/
 }
