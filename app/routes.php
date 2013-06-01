@@ -17,12 +17,6 @@ Route::get('/', ['as' => 'index', function()
 }]);
 
 
-Route::get('test', ['as' => 'index', function()
-{
-	
-}]);
-
-
 
 
 

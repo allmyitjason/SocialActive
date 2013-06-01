@@ -145,10 +145,10 @@
   <div class="clearfix"></div>
 
   <!-- Header ends -->
-<div class='container'>
+
 	@section('content')
 	@show
-</div>
+
 
 <!-- Footer -->
 

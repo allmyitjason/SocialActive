@@ -1,48 +1,103 @@
 @extends('template.base')
 
 @section('content')
- <div class="container">
+
+<!-- Page heading -->
+  <!-- Give background color class on below line (bred, bgreen, borange, bviolet, blightblue, bblue) -->
+  <div class="page-heading blightblue">
+    <div class="container">
       <div class="row">
-        <div class="span6 offset3">
-			
-			<div class="login-box well">
+        <div class="span12">
+          <h2 class="pull-left"><i class="icon-arrow-right title-icon"></i> Login</h2>
+          <div class="pull-right heading-meta">This Is <span class="lightblue">Meta</span>. Write <span class="lightblue">Something</span> Here</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page heading ends -->
+    <!-- Content starts -->
+  <div class="content">
+ <div class="container">
+ 	      <div class="register">
+              <div class="row">
+                <div class="span6">
+                  <h2>Register Today</h2>
+                  <p class="big grey">Morbi tincidunt posuere turpis eu laoreet</p>
+                  <p>Nullam in est urna. In vitae adipiscing enim. Curabitur rhoncus condimentum lorem, non convallis dolor faucibus eget. In vitae adipiscing enim. Curabitur rhoncus condimentum lorem, non convallis dolor faucibus eget. In ut nulla est. </p>
+                  <p>Nullam in est urna. In vitae adipiscing enim. In ut nulla est. Nullam in est urna. In vitae adipiscing enim. Curabitur rhoncus condimentum lorem, non convallis dolor faucibus eget. In ut nulla est. </p>
 
-				@if(Session::has('error'))
-				<div class="alert alert-error">{{ Session::get('error') }}</div>
-				@endif
+                </div>
 
-				<h2>Login to your account</h2>
-				<form class="form-horizontal" action="/login" method="post">
-					<fieldset>
-						<div class="input-prepend" title="Username">
-							<span class="add-on"><i class="icon-user"></i></span>
-							<input class="input-large span10" name="email" id="email" type="text" placeholder="email"/>
+                <div class="span6">
+                  <div id="login-box">
+
+					<!-- start: Row -->
+					<div class="row-fluid">
+
+						<div id="login-form" class="span12">
+
+							<div class="page-title-small">
+
+								<h3>use your account</h3>
+
+							</div>
+
+							<a href="{{$facebookLogin}}" class="facebook_connect">
+								<div class="img"><i class="icon-facebook"></i></div>
+								<div class="text">Login with Facebook</div>
+							</a>
+							<a href="" class="twitter_connect">
+								<div class="img"><i class="icon-twitter"></i></div>
+								<div class="text">Login with Twitter</div>
+							</a>
+
+							<div class="page-title-small">
+
+								<h3>or</h3>
+
+							</div>
+							@if(Session::has('error'))
+								<div class="alert alert-error">{{ Session::get('error') }}</div>
+							@endif
+							<form action="/login" method="post">
+
+								<div class="row-fluid">
+									<input class="span12" name="email" id="email" type="text" placeholder="email"/>
+									<input class="span12" id="pass" name="password" type="password" value="" placeholder="password"/>
+
+								</div>
+
+								<div class="row-fluid">
+
+									<div class="remember">
+										<input id="remember" name="remember" type="checkbox" value="1"/> Remember me!
+									</div>
+
+									<div class="forgot">
+										<a href="/password/remind">Forgot password?</a>
+									</div>
+
+								</div>	
+
+								<div class="actions">
+
+									<button type="submit" class="btn btn-primary span12">Login!</button>
+
+								</div>
+
+							</form>
+
 						</div>
-						<div class="clearfix"></div>
 
-						<div class="input-prepend" title="Password">
-							<span class="add-on"><i class="icon-lock"></i></span>
-							<input class="input-large span10" name="password" id="password" type="password" placeholder="password"/>
-						</div>
+					</div>
+					<!-- end: Row -->	
 
-						<div class="clearfix"></div>
+				</div>
 
-
-						<div class="btn-group button-login">	
-							<button id="login" type="submit" class="btn btn-primary">Login</button>
-						</div>
-					<div class="clearfix"></div>
-				</form>
-				<hr>
-				<a href='{{$facebookLogin}}'>Login with facebook</a>
-
-				<h3>Forgot your password?</h3>
-				<p>
-					No problem, <a href="/password/remind">click here</a> to get a new password.
-				</p>	
-			</div><!--/login-box-->
-		</div>
-	</div>
+                </div>
+              </div>
+            </div> 
+</div>
 </div>
 @stop
 
