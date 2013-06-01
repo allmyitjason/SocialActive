@@ -9,6 +9,8 @@ class ActivityController extends \BaseController {
      */
     protected $activity;
 
+     public $restfull = true;
+
     public function __construct(Activity $activity)
     {
         $this->activity = $activity;
@@ -145,11 +147,13 @@ class ActivityController extends \BaseController {
     /**
      * Return json data of equipment for this acitiviy
      */
-    public function getAjaxEquipment($activityType)
+    public function getJson($id)
     {
-        $type = ActivityType::with('equipment')->where('id', '=', $activityType);
+        $activity = Activity::with(['venue', 'host', 'type'])->find($id);
 
-        return $type;
+        if ($activity) {
+            return $activity;
+        }   
     }
 
 }

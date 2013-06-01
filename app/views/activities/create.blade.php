@@ -80,6 +80,8 @@ $("#activityType_id").change(function() {
 @stop
 
 @section('content')
+<div class="content">
+<div class="container">
 <div class="row-fluid">
     <div class="box span12">
         <div class="box-header">
@@ -138,6 +140,8 @@ $("#activityType_id").change(function() {
         
         </div>
     </div>
+</div>
+</div>
 </div>
 
 @stop

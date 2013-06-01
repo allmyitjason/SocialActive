@@ -11,15 +11,21 @@
 |
 */
 
-Route::get('/', ['as' => 'index', function()
+
+Route::get('/test', function()
 {
-	return View::make('home.index');
-}]);
+
+    
+});
 
 
 
 
 
+Route::get('/activity/{id}/equipment', 'ActivityController@getEquipment');
+
+
+Route::get('/activity/{id}/equipment', ['uses' => 'ActivityController@Equipment']);
 
 // Authentication
 Route::get('/login', ['as' => 'login', 'uses' => 'AuthController@getLogin']);
@@ -44,6 +50,7 @@ Route::group(array('before' => 'auth'), function()
      * Ajax requests
      */
     Route::get('/activitytype/{id}/equipment', 'ActivityTypeController@getEquipment');
+    Route::get('/activity/{id}/json', 'ActivityController@getJson');
 
 	Route::get('/dashboard', function()
 	{
@@ -53,3 +60,5 @@ Route::group(array('before' => 'auth'), function()
 	Route::resource('activity', 'ActivityController');
     Route::resource('activitytype', 'ActivityTypeController');
 });
+
+Route::controller('/', 'HomeController');

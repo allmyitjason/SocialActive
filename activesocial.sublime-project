@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "/var/www/sport"
+		},
+		{
+			"path": "/var/www3/sport"
 		}
 	]
 }

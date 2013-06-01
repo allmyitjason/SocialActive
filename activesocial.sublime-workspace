@@ -460,11 +460,38 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/ActivityController.php",
+			"contents": "<?php\n\n/*\n|--------------------------------------------------------------------------\n| Application Routes\n|--------------------------------------------------------------------------\n|\n| Here is where you can register all of the routes for an application.\n| It's a breeze. Simply tell Laravel the URIs it should respond to\n| and give it the Closure to execute when that URI is requested.\n|\n*/\n\n\nRoute::controller('/', 'HomeController');\nRoute::get('/', ['as' => 'index', function()\n{\n\n\n	return View::make('home.index');\n}]);\n\n\n\n\n\n\n// Authentication\nRoute::get('/login', ['as' => 'login', 'uses' => 'AuthController@getLogin']);\nRoute::post('/login', ['uses' => 'AuthController@postLogin']);\nRoute::get('/logout', ['as' => 'logout', 'uses' => 'AuthController@getLogout']);\n\n// Password Reset\nRoute::get('/password/remind', ['as' => 'passwordreset', 'uses' => 'AuthController@getPasswordRemind']);\nRoute::post('/password/remind', ['uses' => 'AuthController@postPasswordRemind']);\nRoute::get('/password/reset/{token}', ['as' => 'passwordremind', 'uses' => 'AuthController@getPasswordReset']);\nRoute::post('/password/reset/{token}', ['uses' => 'AuthController@postPasswordReset']);\n\n//Registeration\nRoute::get('/register', ['as' => 'register', 'uses' => 'UserController@getRegister']);\nRoute::post('/register', ['uses' => 'UserController@store']);\n\n// Auth protected routes\nRoute::group(array('before' => 'auth'), function()\n{\n\n    /**\n     * Ajax requests\n     */\n    Route::get('/activitytype/{id}/equipment', 'ActivityTypeController@getEquipment');\n    Route::get('/activitytype/{id}/equipment', 'ActivityTypeController@getdetai');\n\n	Route::get('/dashboard', function()\n	{\n		return View::make('template.base');\n	});\n\n	Route::resource('activity', 'ActivityController');\n    Route::resource('activitytype', 'ActivityTypeController');\n});\n",
+			"file": "app/routes.php",
+			"file_size": 1751,
+			"file_write_time": 1370093757000000,
 			"settings":
 			{
-				"buffer_size": 3121,
+				"buffer_size": 1834,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/HomeController.php",
+			"settings":
+			{
+				"buffer_size": 2163,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/home/map.blade.php",
+			"settings":
+			{
+				"buffer_size": 2019,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/template/base.blade.php",
+			"settings":
+			{
+				"buffer_size": 10123,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -596,49 +623,45 @@
 	},
 	"file_history":
 	[
-		"/var/www/sport/public/js/custom.js",
-		"/var/www/sport/app/controllers/AuthController.php",
-		"/var/www/sport/app/config/app.php",
-		"/var/www/sport/app/database/migrations/2013_05_31_000011_create_skilllevels_table.php",
-		"/var/www/sport/app/database/migrations/2013_05_31_000000_create_activities_table.php",
-		"/var/www/sport/app/models/activityPartcipant.php",
-		"/var/www/sport/.gitignore",
-		"/var/www/sport/app/models/User.php",
-		"/var/www/sport/app/routes.php",
-		"/var/www/sport/app/views/activities/index.blade.php",
-		"/var/www/sport/app/views/activities/create.blade.php",
-		"/var/www3/sport/app/views/template/base.blade.php",
+		"/var/www3/sport/app/models/Equipment.php",
+		"/var/www3/sport/app/config/auth.php",
+		"/var/www3/sport/app/controllers/UserController.php",
+		"/var/www3/sport/app/models/User.php",
+		"/var/www3/sport/app/database/migrations/2013_05_31_000011_create_skilllevels_table.php",
+		"/var/www3/sport/app/config/app.php",
+		"/var/www3/sport/app/controllers/AuthController.php",
+		"/var/www3/sport/public/js/custom.js",
+		"/var/www3/sport/app/controllers/ActivityController.php",
+		"/var/www3/sport/app/views/activities/create.blade.php",
+		"/var/www3/sport/app/views/activities/index.blade.php",
 		"/var/www3/sport/app/database/seeds/GenericTableSeeder.php",
+		"/var/www3/sport/app/routes.php",
+		"/var/www3/sport/app/models/activityPartcipant.php",
+		"/var/www3/sport/app/database/migrations/2013_05_31_000000_create_activities_table.php",
+		"/var/www3/sport/app/database/migrations/2013_05_31_000015_create_users_table.php",
+		"/var/www3/sport/.gitignore",
+		"/var/www3/sport/composer.json",
+		"/var/www3/sport/app/views/template/base.blade.php",
 		"/var/www3/sport/app/database/seeds/DatabaseSeeder.php",
 		"/var/www3/sport/app/models/ActivityType.php",
-		"/var/www3/sport/app/database/migrations/2013_05_31_000000_create_activities_table.php",
 		"/var/www3/sport/app/models/Activity.php",
 		"/var/www3/sport/app/database/migrations/2013_05_31_000007_create_genders_table.php",
 		"/var/www3/sport/app/views/template/public.blade.php",
 		"/home/jason/Dropbox/AllMyIt/GovHack/products_WB05BPJ53/site/index.html",
-		"/var/www3/sport/app/routes.php",
-		"/var/www3/sport/app/models/User.php",
-		"/var/www3/sport/app/controllers/UserController.php",
-		"/var/www3/sport/app/controllers/AuthController.php",
 		"/var/www3/sport/app/views/users/register.blade.php",
 		"/var/www3/sport/app/views/auth/login.blade.php",
 		"/var/www3/sport/app/views/home/index.blade.php",
 		"/var/www3/sport/app/models/ActivityDiscussion.php",
 		"/var/www3/sport/app/models/ActivitiesEquipment.php",
 		"/var/www3/sport/app/models/ActivitiesFee.php",
-		"/var/www3/sport/composer.json",
 		"/var/www3/sport/app/controllers/TweetsController.php",
-		"/var/www3/sport/app/views/activities/index.blade.php",
 		"/var/www3/sport/app/database/migrations/2013_05_31_000001_create_activitiesequipment_table.php",
 		"/var/www3/sport/app/database/migrations/2013_05_31_000002_create_activitiesfees_table.php",
 		"/var/www3/sport/app/database/migrations/2013_05_31_000003_create_activitydiscussions_table.php",
 		"/var/www3/sport/app/database/migrations/2013_05_31_000004_create_activitypartcipants_table.php",
 		"/var/www3/sport/app/database/migrations/2013_05_31_000005_create_activitytypes_table.php",
-		"/var/www3/sport/app/controllers/ActivityController.php",
 		"/var/www3/sport/app/models/ActivityPartcipant.php",
 		"/var/www3/sport/app/database/seeds/TweetsTableSeeder.php",
-		"/var/www3/sport/app/database/migrations/2013_05_31_000015_create_users_table.php",
-		"/var/www3/sport/app/config/app.php",
 		"/var/www3/sport/app/database/migrations/2013_05_31_154214_create_users_table.php",
 		"/var/www3/sport/app/models/user.php",
 		"/var/www3/sport/app/controllers/AllMyIt/UserController.php",
@@ -723,7 +746,11 @@
 		"/var/www3/sample-l4-app/app/config/database.php",
 		"/var/www3/sample-l4-app/app/views/layouts/scaffold.blade.php",
 		"/var/www3/sample-l4-app/app/controllers/PostsController.php",
-		"/var/www3/sample-l4-app/composer.json"
+		"/var/www3/sample-l4-app/composer.json",
+		"/var/www3/allmyit-models/composer.json",
+		"/var/www3/peracto/app/models/Peracto/Grower.php",
+		"/var/www3/peracto/app/models/Peracto/TrialType.php",
+		"/var/www3/peracto/app/models/AllMyIt/Role.php"
 	],
 	"find":
 	{
@@ -1003,10 +1030,69 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/ActivityController.php",
+					"file": "app/routes.php",
 					"settings":
 					{
-						"buffer_size": 3121,
+						"buffer_size": 1834,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1626,
+								1626
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/HomeController.php",
+					"settings":
+					{
+						"buffer_size": 2163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1884,
+								1884
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 6.0,
+						"translation.y": 351.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "app/views/home/map.blade.php",
+					"settings":
+					{
+						"buffer_size": 2019,
 						"regions":
 						{
 						},
@@ -1019,12 +1105,40 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/template/base.blade.php",
+					"settings":
+					{
+						"buffer_size": 10123,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9066,
+								9066
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3276.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1049,11 +1163,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.421022109952,
 			1.0
 		],
 		"rows":
@@ -1082,8 +1203,20 @@
 		"selected_items":
 		[
 			[
+				"activcreate",
+				"app/views/activities/create.blade.php"
+			],
+			[
+				"equ",
+				"app/models/Equipment.php"
+			],
+			[
+				"controlleruser",
+				"app/controllers/UserController.php"
+			],
+			[
 				"modeluser",
-				"sport/app/models/User.php"
+				"app/models/User.php"
 			],
 			[
 				"sty",
