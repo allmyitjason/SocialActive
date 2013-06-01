@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGendersTable extends Migration
+class CreateEquipmentTable extends Migration
 {
     /**
     * Run the migrations.
@@ -11,11 +11,12 @@ class CreateGendersTable extends Migration
     */
     public function up()
     {
-        Schema::create('genders', function($table)
+        Schema::create('equipment', function($table)
         {
             $table->engine='InnoDB';
             $table->increments('id')->unsigned();
-            $table->string('gender', 45)->nullable()->default(NULL);
+            $table->string('equipName', 100)->nullable()->default(NULL);
+            $table->text('description')->nullable()->default(NULL);
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateGendersTable extends Migration
     */
     public function down()
     {
-        Schema::drop('genders');
+        Schema::drop('equipment');
     }
 }

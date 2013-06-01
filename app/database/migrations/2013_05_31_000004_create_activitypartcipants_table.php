@@ -17,6 +17,7 @@ class CreateActivitypartcipantsTable extends Migration
             $table->increments('id')->unsigned();
             $table->integer('activity_id')->unsigned();
             $table->integer('user_id')->unsigned();
+            $table->timestamps();
         });
     }
 

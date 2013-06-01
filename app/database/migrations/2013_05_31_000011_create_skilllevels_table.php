@@ -17,6 +17,7 @@ class CreateSkilllevelsTable extends Migration
             $table->increments('id')->unsigned();
             $table->integer('levelNo');
             $table->string('levelDescription', 255);
+            $table->timestamps();
         });
     }
 

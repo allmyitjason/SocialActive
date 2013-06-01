@@ -27,6 +27,7 @@ class CreateActivitiesTable extends Migration
             $table->integer('maxAge')->nullable();
             $table->datetime('activityDate');
             $table->integer('activityDurationMins');
+            $table->timestamps();
         });
     }
 

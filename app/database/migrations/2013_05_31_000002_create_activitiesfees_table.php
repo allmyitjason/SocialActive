@@ -17,6 +17,7 @@ class CreateActivitiesfeesTable extends Migration
             $table->increments('id')->unsigned();
             $table->integer('activity_id')->unsigned();
             $table->float('fee')->nullable()->default(0);
+            $table->timestamps();
         });
     }
 

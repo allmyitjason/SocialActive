@@ -19,6 +19,7 @@ class CreateActivitydiscussionsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->text('discussionText');
             $table->datetime('postDate');
+            $table->timestamps();
         });
     }
 

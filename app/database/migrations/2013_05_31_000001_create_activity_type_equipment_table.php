@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActivitiesequipmentTable extends Migration
+class CreateActivityTypeEquipmentTable extends Migration
 {
     /**
     * Run the migrations.
@@ -11,14 +11,15 @@ class CreateActivitiesequipmentTable extends Migration
     */
     public function up()
     {
-        Schema::create('activities_equipment', function($table)
+        Schema::create('activity_type_equipment', function($table)
         {
             $table->engine='InnoDB';
             $table->increments('id')->unsigned();
-            $table->integer('activity_id')->unsigned();
+            $table->integer('activity_type_id')->unsigned();
             $table->integer('equipment_id')->unsigned();
             $table->integer('reqEachUser')->nullable();
             $table->integer('reqQuantity')->nullable();
+            $table->timestamps();
         });
     }
 

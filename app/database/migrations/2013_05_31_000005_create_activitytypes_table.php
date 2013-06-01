@@ -17,6 +17,7 @@ class CreateActivitytypesTable extends Migration
             $table->increments('id')->unsigned();
             $table->string('type', 100);
             $table->text('description')->nullable();
+            $table->timestamps();
         });
     }
 
