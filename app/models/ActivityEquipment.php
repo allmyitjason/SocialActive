@@ -3,7 +3,7 @@
 Class ActivityEquipment extends Eloquent
 {
 
-    protected $table='activity_equipment';
+    protected $table='activity_activity_equipment';
 
     public function usersactivitiesequipment()
     {
