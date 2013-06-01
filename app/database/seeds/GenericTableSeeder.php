@@ -54,6 +54,19 @@ class GenericTableSeeder extends Seeder {
         DB::table('venues')->insert([
             ['name' => 'Oval (North Tce)', 'address' => '123 Fake St']
         ]);
+
+        DB::table('suburbs')->insert([
+            ['name' => 'Adelaide', 'postcode' => '5000', 'state' => 'SA'],
+            ['name' => 'Blackwood', 'postcode' => '5051', 'state' => 'SA'],
+            ['name' => 'Aberfoyle Park', 'postcode' => '5159', 'state' => 'SA'],
+            ['name' => 'Alawoona', 'postcode' => '5311', 'state' => 'SA'],
+            ['name' => 'Angle Park', 'postcode' => '5010', 'state' => 'SA']
+
+        ]);
+
+        DB::table('activities')->insert([
+            ['user_id' => 1, 'activityType_id' => 1, 'minSkillLevel_id' => 2, 'maxSkillLevel_id' => 5, 'gender_id' => 3, 'venue_id' => 1, 'minParticipants' => 4, 'maxParticipants' => 7, 'minAge' => 5, 'maxAge' => 90, 'activityDate' => '2013-06-01', 'activityDurationMins' => 60]
+        ]);
        
 
 
