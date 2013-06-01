@@ -10,17 +10,17 @@
               <!-- Slide starts -->
               <div class="da-slide">
 
-                  <p class="bviolet">
+                  <p class="bgreen">
                     <!-- Heading -->
-                    <span class="das-head">Amazing Theme Ever</span><br />
+                    <span class="das-head">Looking for a local recreation facility?</span><br />
                     <!-- Para -->
-                    When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove,  the subline of her own road, the Line Lane.
+                    Our extensive database contains the locations of thousands of local sporting facilities and recreational locations. Do you want to organise an activity to meet people in your local area? Click below to find out more.
                     <br />
                     <!-- Link -->
-                    <a class="das-link btn">Read More <i class="icon-double-angle-right"></i></a>
+                    <a class="das-link btn">Find local activities <i class="icon-double-angle-right"></i></a>
                   </p>
                   <!-- Image -->
-                  <div class="da-img"><img src="img/parallax/1.png" alt="image01" /></div>
+                  <div class="da-img"><img src="img/balls.png" alt="image01" /></div>
 
               </div>
               <!-- Slide ends -->
@@ -29,42 +29,42 @@
 
                   <p class="bblue">
                     <!-- Heading -->
-                    <span class="das-head">Based On Metro Interface</span><br />
+                    <span class="das-head">Anyone can host an activity for FREE!</span><br />
                     <!-- Para -->
-                    When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove,  the subline of her own road, the Line Lane.
+                    SocialActive allows anybody to host an activity at your desired venue. Our database includes 1000's of venues around Adelaide in a range of different categories, from tennis and golf to fishing groups and aerobic sessions...
                     <br />
-                    <a class="das-link btn">Read More <i class="icon-double-angle-right"></i></a>
+                    <a class="das-link btn">Host an Activity <i class="icon-double-angle-right"></i></a>
                   </p>
                   <!-- Image -->
-                  <div class="da-img"><img src="img/parallax/2.png" alt="image01" /></div>
+                  <div class="da-img"><img src="img/people.png" alt="image01" /></div>
 
               </div>
               <div class="da-slide">
 
                   <p class="bgreen">
                     <!-- Heading -->
-                    <span class="das-head">Tons Of Features</span><br />
+                    <span class="das-head">Love to fish but don't have a boat?</span><br />
                     <!-- Para -->
-                    When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove,  the subline of her own road, the Line Lane.
+                    Well don't fear, SocialActive allows members with boats to host fishing charters. Simply click the button below to find members near you who are wanting to go on a boating expidition!
                     <br />
-                    <a class="das-link btn">Read More <i class="icon-double-angle-right"></i></a>
+                    <a class="das-link btn">Find fishing activites <i class="icon-double-angle-right"></i></a>
                   </p>
                   <!-- Image -->
-                  <div class="da-img"><img src="img/parallax/3.png" alt="image01" /></div>
+                  <div class="da-img"><img src="img/boat.png" alt="image01" /></div>
 
               </div>
               <div class="da-slide">
 
                   <p class="bred">
                     <!-- Heading -->
-                    <span class="das-head">All In One Theme</span><br />
+                    <span class="das-head">How do you know the host is reliable?</span><br />
                     <!-- Para -->
-                    When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove,  the subline of her own road, the Line Lane.
+                    All of our hosts have ratings and reviews left by other members, make sure you check the activities' host profile before registering for an activity. You also may contact the host through our website before making the decision to register.
                     <br />
                     <a class="das-link btn">Read More <i class="icon-double-angle-right"></i></a>
                   </p>
                   <!-- Image -->
-                  <div class="da-img"><img src="img/parallax/4.png" alt="image01" /></div>
+                  <div class="da-img"><img src="img/tick.png" alt="image01" /></div>
 
               </div>
 
@@ -88,8 +88,8 @@
           </div>
 
           <div class="hero-right">
-            <div class="hero-title">Howdy Dude! <b class="lightblue">Welcome</b> to the most amazing <b class="lightblue">Metro</b> Theme ever made in the history of Internet.</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum condimentum magna, vel cursus turpis fermentum vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum condimentum magna, vel cursus turpis fermentum vel.</p>
+            <div class="hero-title">Hello! <b class="lightblue">Welcome</b> to South Australia's exciting new <b class="lightblue">Sports and Recreation</b> platform.</div>
+            <p>Participants of the <em><a href="http://http://unleashedadelaide.dptiapps.com.au/">Adelaide Unleashed Open Data Competition</a></em> have developed a platform that accesses several Government Sports and Recreation datasets to extract information on local clubs and facilities. SocialActive will allow you to make new friends, eliminate boredom and most importantly help keep you fit and healthy!</p>
           </div>
 
           <div class="clearfix"></div>
@@ -101,63 +101,7 @@
 
 <!-- Hero Ends -->
 
-<!-- Big box starts -->
-
-  <div class="big-box">
-    <div class="container">
-      <div class="row">
-        <div class="span12">
-
-          <!-- Left box -->
-          <div class="big-box-left blightblue">
-            <!-- Box content -->
-            <div class="box-content">
-              <!-- title -->
-              <div class="box-title">Welcome to the <br />world of MetroMan</div>
-              <!-- Para -->
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum condimentum magna, vel cursus turpis fermentum vel. </p>
-              <!-- Button -->
-              <a href="#" class="btn btn-inverse">Check It Out</a>
-              <br /><br />
-              <!-- Links -->
-              <div class="box-links">
-                <a href="#">Checkout other projects of ours <i class="icon-double-angle-right"></i></a>
-                <a href="#">Download Now <i class="icon-double-angle-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Center box -->
-          <div class="big-box-mid blightblue">
-            <!-- Image -->
-            <a href="#"><img src="img/photos/girl1.jpg" alt="" /></a>
-          </div>
-
-          <!-- Right box -->
-          <div class="big-box-right bblack">
-             <div class="box-content">
-                <div class="box-title">Be<span class="lightblue">Stylish</span></div>
-
-                <h4>Name</h4>
-                Jennifer
-                <h4>Date Of Birth</h4>
-                02/07/1990
-                <h4>Address</h4>
-                19,Kumar Street,<br />
-                Nagarkovil, <br />
-                India
-             </div>
-          </div>
-
-          <div class="clearfix"></div>
-
-        </div>
-      </div>
-    </div>  
-  </div>
-  <div class="clearfix"></div>
-
-<!-- Big box ends -->
+@include('home.map');
 
 
 <!-- CTA Starts -->
@@ -168,25 +112,25 @@
       <div class="span5">
         <div class="ctas">
           <!-- Title and Para -->
-          <h5><i class="icon-arrow-right icon-metroid"></i> Professional Product Ever Made </h5>
-          <p>Sed diam nisi, pulvinar vitae molestie vitae molestie hendreri hendrerit, venenatis eget mauris.</p>
+          <h5><i class="icon-arrow-right icon-metroid"></i> Are you a sporting/activities provider?</h5>
+          <p>The SocialActive platform allows you easily to host paid activties, users are able to register for classes or activities with ease.</p>
         </div>
       </div>
       <div class="span4">
         <div class="ctas">
           <!-- List -->
           <ul>
-            <li>Very Cheap in Market. Check it today.</li>
-            <li>Professional and Powerful. Don't miss it.</li>
-            <li>1000% Guanrantee. No Worries. No Probs.</li>
+            <li>Get more exposure for your business.</li>
+            <li>Simple and easy to use system.</li>
+            <li>Make money for your local club / organisation</li>
           </ul>
         </div>
       </div>
       <div class="span3">
         <div class="ctas">
           <!-- Button -->
-          <a href="#" class="btn btn-inverse btn-large">Buy it Today for $99 <i class="icon-double-angle-right"></i></a>
-          <p>limited period offer</p>
+          <a href="#" class="btn btn-inverse btn-large">Host an activity today <i class="icon-double-angle-right"></i></a>
+          
         </div>
       </div>
     </div>
@@ -201,7 +145,7 @@
 <div class="service-home">
   <div class="container">
     <!-- Title -->
-    <h3 class="title"><i class="icon-arrow-right title-icon"></i> Service</h3>
+    <h3 class="title"><i class="icon-arrow-right title-icon"></i> Looking for something to do?</h3>
     <div class="row">
 
       <!-- Social -->
@@ -209,34 +153,34 @@
 
         <div class="service-social bblack">
           <!-- Big number -->
-          <div class="service-big">1,40,<span class="lightblue">000</span></div>
+          <div class="service-big">Top 5 <span class="lightblue">Open Activities</span></div>
           <!-- Labels -->
-          <div class="label label-important">Customers</div> 
-          <div class="label label-info">Business</div> 
-          <div class="label label-success">Clients</div>
+          <div class="label label-important">SPORT</div> 
+          <div class="label label-info">RECREATIONAL</div> 
+          <div class="label label-success">FITNESS</div>
 
           <hr />
 
           <!-- Social media -->
+          <div class="service-box bred">
+            <!-- name and followers -->
+            <a href="#">Tennis <span class="pull-right">43</span></a>
+          </div>
           <div class="service-box bblue">
             <!-- name and followers -->
-            <a href="#">Facebook <span class="pull-right">25000</span></a>
-          </div>
-          <div class="service-box borange">
-            <!-- name and followers -->
-            <a href="#">Google Plus <span class="pull-right">500</span></a>
-          </div>
-          <div class="service-box blightblue">
-            <!-- name and followers -->
-            <a href="#">Twitter <span class="pull-right">25000</span></a>
+            <a href="#">Fishing <span class="pull-right">31</span></a>
           </div>
           <div class="service-box bred">
             <!-- name and followers -->
-            <a href="#">PInterest <span class="pull-right">15000</span></a>
+            <a href="#">Cricket <span class="pull-right">28</span></a>
           </div>
-          <div class="service-box borange">
+          <div class="service-box bblue">
             <!-- name and followers -->
-            <a href="#">RSS <span class="pull-right">25000</span></a>
+            <a href="#">Golf <span class="pull-right">25</span></a>
+          </div>
+          <div class="service-box bgreen">
+            <!-- name and followers -->
+            <a href="#">Yoga<span class="pull-right">15</span></a>
           </div>    
 
           <div class="clearfix"></div>
@@ -257,9 +201,9 @@
 
           <div class="service-content">
             <!-- Title -->
-            <div class="service-home-meta">something</div>
-            <h4>We Design Websites</h4>
-            <p>Aenean sodales augue ac rhoncus erat hendrerit. Vivamus vel ultricies elit.</p>
+            <div class="service-home-meta">Take action</div>
+            <h4>Host a sporting activity</h4>
+            <p>SocialActive enables you to organise <strong>any</strong> type of sporting activity in your local area!</p>
           </div>
 
           <hr />
@@ -271,9 +215,9 @@
           </div>
 
           <div class="service-content">
-            <div class="service-home-meta">something</div>
-            <h4>Our Designs are Responsive</h4>
-            <p>Aenean sodales augue ac rhoncus erat hendrerit. Vivamus vel ultricies elit.</p>
+            <div class="service-home-meta">FISHING</div>
+            <h4>Organise or join a fishing group</h4>
+            <p>Want to go fishing but don't want to go by yourself? Meet up with people who like to fish!</p>
           </div>
 
           <hr />   
@@ -285,8 +229,8 @@
           </div>
 
           <div class="service-content">
-            <div class="service-home-meta">something</div>
-            <h4>Everything in Cloud</h4>
+            <div class="service-home-meta">GROUP WORKOUT</div>
+            <h4>Find local gyms offering classes</h4>
             <p>Aenean sodales augue ac rhoncus erat hendrerit. Vivamus vel ultricies elit.</p>
           </div>
           
@@ -299,9 +243,9 @@
           </div>
 
           <div class="service-content">
-            <div class="service-home-meta">something</div>
-            <h4>Top Notch Support</h4>
-            <p>Aenean sodales augue ac rhoncus erat hendrerit. Vivamus vel ultricies elit.</p>
+            <div class="service-home-meta">GET YOUR FRIENDS ACTIVE</div>
+            <h4>Invite your friends to a private activity</h4>
+            <p>Hosting activities doesn't need to be public, you can opt for a private activity where you can send requests to your friends.</p>
           </div>
           
           <br />
@@ -313,7 +257,7 @@
 
       <!-- Image -->
       <div class="span3">
-        <a href="#" class="service-image"><img src="img/photos/girl2.png" alt="" /></a>
+        <a href="#" class="service-image"><img src="img/basketball.jpg" alt="" /></a>
       </div>
 
     </div>
@@ -357,121 +301,7 @@
 
 <!-- Pricing Table starts -->
 
-        <div class="pricing-table">
-          <div class="container">
-            <!-- Title -->
-            <h3 class="title"><i class="icon-arrow-right title-icon"></i> Pricing Table</h3>
-
-                  <!-- Pricing table -->                     
-                     <!-- Price details. Note down the class name before you edit. -->
-                     <div class="row">
-                     
-                        <div class="span6">
-                        
-                           <!-- Add the class "phighlight" to highlight specific table -->
-                           
-                           <!-- Pricing table #1. Class name "price-a" -->
-                           <div class="price-a pricel center">
-                                 <div class="phead-top blightblue">
-                                    <!-- Title -->
-                                    <h4>Starter</h4>
-                                 </div>
-                                 <div class="phead-bottom">
-                                    <!-- Price. Use the syntax correctly. -->
-                                    <p><span class="pst">$</span> 4.99 <span class="psb">/m</span></p>
-                                 </div>
-                                 <div class="arrow-down"></div>
-                              <div class="plist">
-                                 <!-- List -->
-                                 <ul>
-                                    <li>1 GB Disk Space</li>
-                                    <li>10 GB Data Transfer</li>
-                                    <li>10 Email Ids</li>
-                                 </ul>
-                              </div>
-                              <div class="pbutton">  
-                                 <!-- button -->
-                                 <a href="#" class="btn btn-danger btn-large">Buy Now</a>
-                              </div>
-                           </div>
-                           
-                           <!-- Pricing table #2. Class name "price-b" -->
-                           <div class="price-b pricel center">
-                                 <div class="phead-top blightblue">
-                                    <h4>Basic</h4>
-                                 </div>
-                                 <div class="phead-bottom">
-                                    <p><span class="pst">$</span> 8.99 <span class="psb">/m</span></p>
-                                 </div>
-                                 <div class="arrow-down"></div>
-                              <div class="plist">
-                                 <ul>
-                                    <li>1 GB Disk Space</li>
-                                    <li>10 GB Data Transfer</li>
-                                    <li>10 Email Ids</li>
-                                 </ul>
-                              </div>
-                              <div class="pbutton">  
-                                 <!-- button -->
-                                 <a href="#" class="btn btn-danger btn-large">Buy Now</a>
-                              </div>
-                           </div>   
-                                 
-                           <div class="clearfix"></div>
-                        </div>  
-                        
-                        <div class="span6">
-                        
-                           <!-- Pricing table #3. Class name "price-a" -->
-                           <div class="price-a pricel center">
-                                 <div class="phead-top bviolet">
-                                    <h4>Business</h4>
-                                 </div>
-                                 <div class="phead-bottom">
-                                    <p><span class="pst">$</span> 12.99 <span class="psb">/m</span></p>
-                                 </div>
-                                 <div class="arrow-down"></div>
-                              <div class="plist">
-                                 <ul>
-                                    <li>1 GB Disk Space</li>
-                                    <li>10 GB Data Transfer</li>
-                                    <li>10 Email Ids</li>
-                                 </ul>
-                              </div>
-                              <div class="pbutton">  
-                                 <!-- button -->
-                                 <a href="#" class="btn btn-danger btn-large">Buy Now</a>
-                              </div>
-                           </div>
-                           
-                           <!-- Pricing table #4. Class name "price-b" -->
-                           <div class="price-b pricel center">
-                                 <div class="phead-top blightblue">
-                                    <h4>Enterprise</h4>
-                                 </div>
-                                 <div class="phead-bottom">
-                                    <p><span class="pst">$</span> 39.99 <span class="psb">/m</span></p>
-                                 </div>
-                                 <div class="arrow-down"></div>
-                              <div class="plist">
-                                 <ul>
-                                    <li>1 GB Disk Space</li>
-                                    <li>10 GB Data Transfer</li>
-                                    <li>10 Email Ids</li>
-                                 </ul>
-                              </div>
-                              <div class="pbutton">  
-                                 <!-- button -->
-                                 <a href="#" class="btn btn-danger btn-large">Buy Now</a>
-                              </div>
-                           </div>   
-                                 
-                           <div class="clearfix"></div>                        
-                                                   
-                        </div>
-                     </div> 
-                  </div>
-                </div>
+        
 
 <!-- Pricing Table ends -->
             
@@ -481,14 +311,10 @@
     <div class="container">
             <div class="row">
                <div class="span12">
-                     <h3 class="title">Our Clients</h3>
-                     <p><i class="icon-quote-left lightblue"></i>Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem fermentum ipsum dolor sit amet, ipsum dolor sit amet, consectetur fermentum adipiscing elit.<i class="icon-quote-right lightblue"></i></p>
-                     <img src="img/clients/amazon.png" alt="" />
-                     <img src="img/clients/google.png" alt="" />
-                     <img src="img/clients/twitter.png" alt="" />
-                     <img src="img/clients/facebook.png" alt="" />
-                     <img src="img/clients/skype.png" alt="" />
-                     <img src="img/clients/youtube.png" alt="" />
+                     <h3 class="title">We're helping create a vibrant city!</h3>
+                     <p><i class="icon-quote-left lightblue"></i>Adelaide is rated one of the world’s most liveable cities. Yet it has a reputation for being boring and many of our young people leave the State.<i class="icon-quote-right lightblue"></i></p>
+                     <img src="img/salogo.jpg" alt="" />
+                     <img src="img/beactive.jpg" alt="" />
                </div>
             </div>
     </div>

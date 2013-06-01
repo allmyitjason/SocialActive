@@ -13,7 +13,6 @@
   <!-- Stylesheets -->
   <!-- Bootstrap -->
   <link href="/style/bootstrap.css" rel="stylesheet">
-  <link href="/style/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
   <!-- Font awesome icon -->
   <link rel="stylesheet" href="/style/font-awesome.css">
   <!-- Navigation menu -->
@@ -25,6 +24,7 @@
   <link rel="stylesheet" href="/style/prettyPhoto.css">
   <!-- Custom style -->
   <link href="/style/style.css" rel="stylesheet">
+  <link href="/style/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
   <!-- Responsive Bootstrap -->
   <link href="/style/bootstrap-responsive.css" rel="stylesheet">
   
@@ -39,7 +39,6 @@
 
 <body>
 
-
   <!-- Sliding panel starts-->
 
   <div class="slidepanel">
@@ -48,9 +47,8 @@
         <div class="span8">
           <div class="spara"> 
             <!-- Contact details -->
-            <p><i class="icon-envelope-alt lightblue"></i> something@gmail.com &nbsp; 
-              <i class="icon-twitter lightblue"></i> @something &nbsp; 
-              <i class="icon-desktop lightblue"></i> 123-456-7890
+            <p><i class="icon-envelope-alt lightblue"></i> info@socialactive.com.au &nbsp; 
+              <i class="icon-twitter lightblue"></i> @SocialActive &nbsp; 
             </p>
           </div>
         </div>
@@ -78,22 +76,14 @@
     <div class="container">
       <div class="row">
 
-        <div class="span3">
+        <div class="span5">
 
           <!-- Logo starts -->
 
           <div class="logo">
 
             <div class="logo-image">
-              <!-- Image link -->
-              <a href="index.html"><i class="icon-desktop blue"></i></a>
-            </div>
-            
-            <div class="logo-text">
-              <h1><a href="index.html">Metro<span class="lightblue">Man</span></a></h1>
-              <div class="logo-meta">Cool Metro Theme</div>
-            </div>
-
+            <img src="/img/logo.png" width="450" height="105"></div>
             <div class="clearfix"></div>
 
           </div>
@@ -102,30 +92,21 @@
 
         </div>
 
-        <div class="span9">
+        <div class="span7">
 
-         <!-- Navbar starts -->
+          <!-- Navbar starts -->
 
           <div class="navi pull-right">
             <div id="ddtopmenubar" class="mattblackmenu">
               <!-- Main navigation -->
               <!-- Use the background color class in anchor tag for colorful menu -->
               <ul>
-
                 <li><a href="index.html" class="blightblue"> <i class="icon-home"></i> Home</a></li>
-                <!-- Main navigation -->
-                <li><a href="#" rel="ddsubmenu2" class="bred"> <i class="icon-desktop"></i> Find</a></li>
-                <!-- Main navigation -->
-                <li>
-                  <a href="/activity" rel="ddsubmenu2" class="bviolet"> <i class="icon-tablet"></i> Host</a></li>                
-
-                <li><a href="#" rel="ddsubmenu2" class="bgreen"> <i class="icon-comments"></i> Login</a></li>
-
-                <li><a href="portfolio.html" class="borange"> <i class="icon-camera"></i> About</a></li>
-
+                <li><a href="#" rel="ddsubmenu2" class="bred"> <i class="icon-search"></i> Find</a></li>
+                <li><a href="#" rel="ddsubmenu2" class="bviolet"> <i class="icon-thumbs-up"></i> Host</a></li>                
+                <li><a href="#" rel="ddsubmenu2" class="bgreen"> <i class="icon-pencil"></i> Sign Up</a></li>
+                <li><a href="portfolio.html" class="borange"> <i class="icon-info-sign"></i> About</a></li>
                 <li><a href="contactus.html" class="bblue"> <i class="icon-envelope-alt"></i> Contact</a></li>
-
-
               </ul>
             </div>
           </div>
@@ -146,8 +127,10 @@
 
   <!-- Header ends -->
 
-	@section('content')
-	@show
+    @section('content')
+  @show
+
+
 
 
 <!-- Footer -->
@@ -180,13 +163,14 @@
             
             <h4>Contact</h4>
 
-                  <p>Nullam justo nunc, dignissim at convallis posuere, sodales eu orci. </p>
+                  <p>Have feeback or any questions? Contact Us.</p>
                   <hr />
-                  <i class="icon-home"></i> &nbsp; 123, Some Area. Los Angeles, CA, 54321.
+                  <i class="icon-home"></i> &nbsp; Adelaide, South Australia
                   <hr />
-                  <i class="icon-phone"></i> &nbsp; +239-3823-3434
+                  <i class="icon-phone"></i> &nbsp;
+                  1800 SOCIAL ACTIVE
                   <hr />
-                  <i class="icon-envelope-alt"></i> &nbsp; <a href="mailto:#">someone@company.com</a>
+                  <i class="icon-envelope-alt"></i> &nbsp; <a href="mailto:#">info@socialactive.com.au</a>
                   <hr />
                     <div class="social">
                       <a href="#" class="bblue"><i class="icon-facebook"></i></a>
@@ -260,7 +244,7 @@
 <!-- JS -->
 <script src="/js/jquery.js"></script> <!-- jQuery -->
 <script src="/js/bootstrap.js"></script> <!-- Bootstrap -->
-<script src="/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="/js/jquery-ui-1.10.3.custom.min.js"></script> <!-- Bootstrap -->
 <script src="/js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto -->
 <script src="/js/jquery.isotope.js"></script> <!-- isotope -->
 <script src="/js/ddlevelsmenu.js"></script> <!-- Navigation menu -->
@@ -270,18 +254,24 @@
 <script src="/js/filter.js"></script> <!-- Support -->
 <script src="/js/custom.js"></script> <!-- Custom JS -->
 
+
+
 <!--Remove facebook crap returned with redirect url...-->
-	<script type="text/javascript">
+  <script type="text/javascript">
     if (window.location.hash == '#_=_') {
         window.location.hash = ''; // for older browsers, leaves a # behind
         history.pushState('', document.title, window.location.pathname); // nice and clean
         e.preventDefault(); // no page reload
     }
 
-    $( document ).ready(function() {
+    $(document).ready(function() {
       @section('jQuery')
       @show
     });
+
+
+    @section('javascript')
+    @show
 
 </script>
 
@@ -316,12 +306,7 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
+@section('javascriptFiles')
+@show
 </body>
 </html>
-
-
-
-
-		
-
-

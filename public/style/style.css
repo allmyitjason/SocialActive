@@ -682,7 +682,7 @@ header .logo-meta{
  }
 
 .da-slider .das-head{
-	font-size: 30px;
+	font-size: 20px;
 	line-height: 50px;
 }
 
@@ -2235,4 +2235,16 @@ footer .copy{
 /* Custom */
 #create_activity .form-slider {
 	max-width:200px;
+}
+
+#activity-details {
+	position:relative;
+	height:296px;
+}
+
+#activity-details .more {
+	position:absolute;
+	bottom:5px;
+	right:5px;
+	display:none;
 }
