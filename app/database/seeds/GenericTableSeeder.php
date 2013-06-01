@@ -33,6 +33,16 @@ class GenericTableSeeder extends Seeder {
                 break;
             }
         }
+
+
+        DB::table('skilllevels')->insert([
+            ['levelNo' => 1, 'levelDescription' => 'Novice' ],
+            ['levelNo' => 2, 'levelDescription' => 'Beginner' ],
+            ['levelNo' => 3, 'levelDescription' => 'Ok' ],
+            ['levelNo' => 4, 'levelDescription' => 'Good' ],
+            ['levelNo' => 5, 'levelDescription' => 'Pro' ]
+
+        ]);
        
 
 
