@@ -1,9 +1,9 @@
 <?php
 
-Class ActivityTypeEquipment extends Eloquent
+Class ActivityEquipment extends Eloquent
 {
-    protected $guarded = [];
-    protected $table='activity_type_equipment';
+
+    protected $table='activity_equipment';
 
     public function usersactivitiesequipment()
     {

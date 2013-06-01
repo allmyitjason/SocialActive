@@ -2,6 +2,7 @@
 
 Class ActivityType extends Eloquent
 {
+	protected $guarded = [];
     protected $table='activitytypes';
 
     public function equipment()

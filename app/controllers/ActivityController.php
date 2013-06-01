@@ -44,16 +44,30 @@ class ActivityController extends \BaseController {
     public function store()
     {
         $input = Input::all();
+
+        $input['user_id'] = Auth::user()->id;
+        $equipments = $input['equipment'];
+        unset($input['equipment']);
+
         $validation = Validator::make($input, Activity::$rules);
 
         if ($validation->passes())
         {
-            $this->activity->create($input);
+            $activity = $this->activity->create($input);
 
-            return Redirect::route('activities.index');
+            if ($activity) {
+                if (count($equipments) > 0) {
+                    foreach ($equipments as $equipment) {
+                        $activity->equipment()->attach($equipment);
+                    }
+                }
+            }
+            die;
+
+            return Redirect::route('activity.index');
         }
 
-        return Redirect::route('activities.create')
+        return Redirect::route('activity.create')
             ->withInput()
             ->withErrors($validation)
             ->with('message', 'There were validation errors.');
@@ -69,7 +83,7 @@ class ActivityController extends \BaseController {
     {
         $activity = $this->activity->findOrFail($id);
 
-        return View::make('activities.show', compact('activity'));
+        return View::make('activity.show', compact('activity'));
     }
 
     /**

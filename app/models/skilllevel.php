@@ -4,7 +4,7 @@
 
 Class Skilllevel extends Eloquent
 {
-
+	protected $guarded = [];
     protected $table='skilllevels';
 
     public function userskilllevels()

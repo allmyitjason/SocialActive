@@ -4,7 +4,7 @@
 
 Class Gender extends Eloquent
 {
-
+	protected $guarded = [];
     protected $table='genders';
 
     public function activities()

@@ -2,7 +2,7 @@
 
 Class ActivityPartcipant extends Eloquent
 {
-
+	protected $guarded = [];
     protected $table='activitypartcipants';
 
     public function activities()
