@@ -20,6 +20,23 @@ class GenericTableSeeder extends Seeder {
         	['type' => 'Tennis', 'description' => ''],
         	['type' => 'Fishing', 'description' => 'Jetty'],
         ]);
+
+        //Add default equipment links
+        foreach (ActivityType::all() as $type) {
+            switch($type->type) {
+                case "Cricket":
+                    $equipment = new Equipment(['equipName' => 'Bat', 'description' => 'Cricket Bat']);
+                    $type->equipment()->save($equipment);
+
+                    $equipment = new Equipment(['equipName' => 'Ball', 'description' => 'Cricket Ball']);
+                    $type->equipment()->save($equipment);
+                break;
+            }
+        }
+       
+
+
+        
     }
 
 }
