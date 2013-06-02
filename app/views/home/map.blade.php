@@ -20,15 +20,41 @@ function showActivityDetails(id) {
 }
 
 
+function PlotMarker(id, lat, lon){
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(lat, lon),
+        map: {{$mapName}},
+        draggable: false,
+        clickable: true,
+        animation: google.maps.Animation.DROP,
+        icon: '/img/icons/cricket.png',
+    });
+
+    google.maps.event.addDomListener(marker,'click', function() {
+       showActivityDetails(id);
+    });
+}
+
+function geocodeResult(results, status) {
+    if (status == 'OK' && results.length > 0) {
+      {{$mapName}}.fitBounds(results[0].geometry.viewport);
+    } else {
+      alert("Geocode was not successful for the following reason: " + status);
+    }
+  }
+
+
 
 @stop
 
 @section('jQuery')
 
+
+
 $( "#suburbs" ).autocomplete({
       source: function( request, response ) {
         $.ajax({
-          url: "/suburbs",
+          url: "/suburb/auto-complete",
           dataType: "json",
           data: {
             featureClass: "P",
@@ -39,9 +65,9 @@ $( "#suburbs" ).autocomplete({
           success: function( data ) {
             response($.map( data.postcodes, function( item ) {
               return {
-                label: item.PCode + (item.Locality ? ", " + item.Locality : ""),
-                value: item.Locality + ", " + item.State,
-                Pcode: item.PCode
+                label: item.postcode + (item.name ? ", " + item.name : ""),
+                value: item.name + ", " + item.state,
+                Pcode: item.postcode
               }
             }));
           }
@@ -49,7 +75,24 @@ $( "#suburbs" ).autocomplete({
       },
       minLength: 2,
       select: function( event, ui ) {
-        $("#locality").val(ui.item.value);return false;
+        //$("#locality").val(ui.item.value);return false;
+
+        $.get('/activity/markers/'+ui.item.Pcode, function(data) {
+
+        console.log(data);
+          $.each(data, function(k, v) {
+          console.log(v);
+             PlotMarker(v.id, v.venue.latitude, v.venue.longitude);
+          });
+
+           var address = '5051, Blackwood, SA';
+           var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+              'address': address,
+              'partialmatch': true}, geocodeResult);
+      });
+
+
       },
       open: function() {
         $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
@@ -84,8 +127,7 @@ $( "#suburbs" ).autocomplete({
               <a href="#" class="btn btn-inverse">Search</a><br /><br />
               <!-- Links -->
               <div class="box-links">
-                <a href="#">Checkout other projects of ours <i class="icon-double-angle-right"></i></a>
-                <a href="#">Download Now <i class="icon-double-angle-right"></i></a>
+                <a href="/find">Advanced Search <i class="icon-double-angle-right"></i></a>
               </div>
             </div>
           </div>

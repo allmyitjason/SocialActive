@@ -143,6 +143,57 @@ class ActivityController extends \BaseController {
         return Redirect::route('activities.index');
     }
 
+    /**
+     * Display a search and listing
+     */
+    public function getFind()
+    {
+        $activities = $this->activity->all();
+
+        return View::make('activities.find', compact('activities'));
+    }
+
+    public function getMarkers($postcode)
+    {
+        $suburbs = Suburb::where('postcode', '=', $postcode)->get(['id']);
+        $suburbs =  array_values($suburbs->toArray());
+        $filter = [];
+        $activities = [];
+
+        foreach ($suburbs as $sub) {
+            $filter[] = $sub['id'];
+        }
+
+        if (count($filter) > 0){
+
+            $venues = Venue::whereIn('suburb_id', $filter)->get(['id']);
+            $filter = [];
+
+            foreach ($venues as $venue) {
+                $filter[] = $venue['id'];
+            }
+
+            if (count($filter)) {
+                $activities = Activity::with(['venue'])->whereIn('venue_id', $filter)->get();
+            }
+        }
+
+       return ($activities);
+
+    }
+
+    public function postFind()
+    {
+        $input = Input::all();
+
+        $activities = Activity::with(['gender' => function($query) {
+            $query->where('id', '=', 0);
+        }])->get();
+
+        return View::make('activities.find')
+            ->with('activities', $activities);
+    }
+
 
     /**
      * Return json data of equipment for this acitiviy

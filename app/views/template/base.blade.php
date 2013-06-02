@@ -101,12 +101,12 @@
               <!-- Main navigation -->
               <!-- Use the background color class in anchor tag for colorful menu -->
               <ul>
-                <li><a href="index.html" class="blightblue"> <i class="icon-home"></i> Home</a></li>
-                <li><a href="#" rel="ddsubmenu2" class="bred"> <i class="icon-search"></i> Find</a></li>
-                <li><a href="#" rel="ddsubmenu2" class="bviolet"> <i class="icon-thumbs-up"></i> Host</a></li>                
-                <li><a href="#" rel="ddsubmenu2" class="bgreen"> <i class="icon-pencil"></i> Sign Up</a></li>
-                <li><a href="portfolio.html" class="borange"> <i class="icon-info-sign"></i> About</a></li>
-                <li><a href="contactus.html" class="bblue"> <i class="icon-envelope-alt"></i> Contact</a></li>
+                 <li><a href="/" class="blightblue"> <i class="icon-home"></i> Home</a></li>
+                <li><a href="/find" rel="ddsubmenu2" class="bred"> <i class="icon-search"></i> Find</a></li>
+                <li><a href="/activity" rel="ddsubmenu2" class="bviolet"> <i class="icon-thumbs-up"></i> Host</a></li>                
+                <li><a href="/register" rel="ddsubmenu2" class="bgreen"> <i class="icon-pencil"></i> Sign Up</a></li>
+                <li><a href="/about" class="borange"> <i class="icon-info-sign"></i> About</a></li>
+                <li><a href="/contact" class="bblue"> <i class="icon-envelope-alt"></i> Contact</a></li>
               </ul>
             </div>
           </div>

@@ -54,7 +54,7 @@ class HomeController extends \BaseController {
 
 			// Configure your marker options
 			$marker->setPrefixJavascriptVariable('marker_');
-			$marker->setPosition($activity->venue->longitude,$activity->venue->latitude, true);
+			$marker->setPosition($activity->venue->latitude,$activity->venue->longitude, true);
 			$marker->setAnimation(Animation::DROP);
 
 			$marker->setOptions(array(
@@ -71,7 +71,7 @@ class HomeController extends \BaseController {
 			$event->setHandle('function(){showActivityDetails('.$activity->id.');}');
 
 			$map->getEventManager()->addDomEvent($event);
-			$map->addMarker($marker);
+			//$map->addMarker($marker);
 
 		}
 
@@ -81,6 +81,7 @@ class HomeController extends \BaseController {
 
 		return View::make('home.index')
 			->with('map', $mapHelper->renderHtmlContainer($map))
-			->with('mapjs', $mapHelper->renderJavascripts($map));
+			->with('mapjs', $mapHelper->renderJavascripts($map))
+			->with('mapName', $map->getJavascriptVariable());
 	}
 }

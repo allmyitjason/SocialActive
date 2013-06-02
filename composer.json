@@ -4,7 +4,6 @@
 		"anahkiasen/former": "dev-agnostic",
 		"loic-sharma/profiler": "1.0.*",
 		"way/generators": "dev-master",
-		"allmyit/router": "dev-master",
 		"codeception/codeception" : "@stable",
 		"pdepend/pdepend": "dev-master",
 		"phpmd/phpmd": "dev-master",
@@ -35,10 +34,6 @@
                     "classmap": ["src/"]
                 }
             }
-        },
-        {
-            	"type": "vcs",
-            	"url":  "git@bitbucket.org:allmyit/router.git"
         }
     ],
 	"scripts": {

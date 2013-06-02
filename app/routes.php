@@ -15,7 +15,7 @@
 Route::get('/test', function()
 {
 
-    
+
 });
 
 
@@ -51,6 +51,9 @@ Route::group(array('before' => 'auth'), function()
      */
     Route::get('/activitytype/{id}/equipment', 'ActivityTypeController@getEquipment');
     Route::get('/activity/{id}/json', 'ActivityController@getJson');
+   
+
+    Route::get('/find', 'ActivityController@getFind');
 
 	Route::get('/dashboard', function()
 	{
@@ -60,5 +63,8 @@ Route::group(array('before' => 'auth'), function()
 	Route::resource('activity', 'ActivityController');
     Route::resource('activitytype', 'ActivityTypeController');
 });
+
+Route::get('/suburb/auto-complete', 'SuburbController@getAutoComplete');
+Route::get('/activity/markers/{postcode}', 'ActivityController@getMarkers');
 
 Route::controller('/', 'HomeController');
