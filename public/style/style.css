@@ -2255,3 +2255,18 @@ footer .copy{
 .search-results .activity-title {
 	font-size: 22px;
 }
+
+#register {
+	max-width: 350px;
+	margin:0px auto;
+}
+
+#register .buttons {
+	max-width:140px;
+	margin:0px auto;
+}
+
+#create-activity .buttons {
+	max-width:140px;
+	margin:0px auto;
+}

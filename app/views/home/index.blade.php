@@ -271,31 +271,6 @@
 
 <!-- Features starts -->
 
-<div class="features-one">
-  <div class="container">
-
-    <div class="row">
-
-      <div class="span6">
-        <a href="#"><img src="img/photos/shots.jpg" alt="" /></a>
-      </div>
-
-      <div class="span6">
-
-        <h2>Best <span class="lightblue">Theme</span> Ever Made On The History Of The Internet.</h2>
-        <!-- Meta -->
-        <div class="features-meta">
-          <i class="icon-desktop lightblue"></i> Responsive - 
-          <i class="icon-gift lightblue"></i> Professional - 
-          <i class="icon-sitemap lightblue"></i> Feature Full
-        </div>
-        <p>Vivamus diam diam, fermentum  eros. Vivamus diam diam, fermentum sed dapibus eget, egestas sed eros. Lorem ipsum dolor sit amet, fermentum sed dapibus eget, egestas sed eros consectetur adipiscing elit.  </p>
-        <a href="#" class="btn btn-danger btn-large">Download Now <i class="icon-double-angle-right"></i></a>
-      </div>
-
-    </div>
-  </div>
-</div>
 
 <!-- Features ends -->
 

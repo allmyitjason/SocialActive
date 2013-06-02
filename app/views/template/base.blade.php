@@ -103,8 +103,8 @@
               <ul>
                  <li><a href="/" class="blightblue"> <i class="icon-home"></i> Home</a></li>
                 <li><a href="/find" rel="ddsubmenu2" class="bred"> <i class="icon-search"></i> Find</a></li>
-                <li><a href="/activity" rel="ddsubmenu2" class="bviolet"> <i class="icon-thumbs-up"></i> Host</a></li>                
-                <li><a href="/register" rel="ddsubmenu2" class="bgreen"> <i class="icon-pencil"></i> Sign Up</a></li>
+                <li><a href="/activity/create" rel="ddsubmenu2" class="bviolet"> <i class="icon-thumbs-up"></i> Host</a></li>                
+                <li><a href="/login" rel="ddsubmenu2" class="bgreen"> <i class="icon-pencil"></i> Sign Up</a></li>
                 <li><a href="/about" class="borange"> <i class="icon-info-sign"></i> About</a></li>
                 <li><a href="/contact" class="bblue"> <i class="icon-envelope-alt"></i> Contact</a></li>
               </ul>
@@ -158,75 +158,9 @@
 
       <div class="widgets">
 
-        <div class="span3">
-          <div class="fwidget">
-            
-            <h4>Contact</h4>
+      
 
-                  <p>Have feeback or any questions? Contact Us.</p>
-                  <hr />
-                  <i class="icon-home"></i> &nbsp; Adelaide, South Australia
-                  <hr />
-                  <i class="icon-phone"></i> &nbsp;
-                  1800 SOCIAL ACTIVE
-                  <hr />
-                  <i class="icon-envelope-alt"></i> &nbsp; <a href="mailto:#">info@socialactive.com.au</a>
-                  <hr />
-                    <div class="social">
-                      <a href="#" class="bblue"><i class="icon-facebook"></i></a>
-                      <a href="#" class="borange"><i class="icon-google-plus"></i></a> 
-                      <a href="#" class="blightblue"><i class="icon-twitter"></i></a>
-                      <a href="#" class="bviolet"><i class="icon-linkedin"></i></a>
-                      <a href="#" class="bred"><i class="icon-pinterest"></i></a>
-                      <a href="#" class="borange"><i class="icon-rss"></i></a>
-                    </div>
-
-          </div>
-        </div>
-
-        <div class="span3">
-          <div class="fwidget">
-            <h4>Categories</h4>
-            <ul>
-              <li><a href="#">Condimentum - Condimentum gravida</a></li>
-              <li><a href="#">Etiam at - Condimentum gravida</a></li>
-              <li><a href="#">Fusce vel - Condimentum gravida</a></li>
-              <li><a href="#">Vivamus - Condimentum gravida</a></li>
-              <li><a href="#">Pellentesque - Condimentum gravida</a></li>
-              <li><a href="#">Fusce vel - Condimentum gravida</a></li>
-            </ul>
-          </div>
-        </div>        
-
-        <div class="span3">
-          <div class="fwidget">
-            
-            <h4>Subscribe</h4>
-            <p>Duis leo risus, condimentum ut posuere ac, vehicula luctus nunc.  Quisque rhoncus, a sodales enim arcu quis turpis.</p>
-            <p>Enter you email to Subscribe</p>
-            
-            <form class="form-inline">
-              <div class="input-append row-fluid">
-                <input type="text" class="span8" placeholder="Subscribe">
-                <button type="submit" class="btn btn-danger">Subscribe</button>
-              </div>
-            </form>
-
-          </div>
-        </div>
-
-        <div class="span3">
-          <div class="fwidget">
-            <h4>Recent Posts</h4>
-            <ul>
-              <li><a href="#">Sed eu leo orci, condimentum gravida metus</a></li>
-              <li><a href="#">Etiam at nulla ipsum, in rhoncus purus</a></li>
-              <li><a href="#">Fusce vel magna faucibus felis dapibus facilisis</a></li>
-              <li><a href="#">Vivamus scelerisque dui in massa</a></li>
-              <li><a href="#">Pellentesque eget adipiscing dui semper</a></li>
-            </ul>
-          </div>
-        </div>
+        
 
       </div>
 
@@ -286,7 +220,7 @@
       xfbml      : true    // Look for social plugins on the page                            
     });
 
-   /* FB.ui({method: 'apprequests',
+   /*FB.ui({method: 'apprequests',
     message: 'My Great Request'
   }, requestCallback);*/
 

@@ -19,6 +19,20 @@ Route::get('/test', function()
 });
 
 
+Route::get('/contact', function() {
+
+    return View::make('home.contact');
+});
+
+Route::get('/about', function() {
+    return View::make('home.about');
+});
+
+Route::post('/contact', function() {
+    return Redirect::to('/');
+});
+
+
 
 
 
@@ -59,6 +73,8 @@ Route::group(array('before' => 'auth'), function()
 	{
 		return View::make('template.base');
 	});
+
+    Route::get('/activity/{id}/join', 'ActivityController@getJoin');
 
 	Route::resource('activity', 'ActivityController');
     Route::resource('activitytype', 'ActivityTypeController');

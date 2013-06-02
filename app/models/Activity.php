@@ -82,4 +82,9 @@ Class Activity extends Eloquent
         return $this->belongsTo('Venue', 'venue_id');
     }
 
+    public function participants()
+    {
+        return $this->belongsToMany('User', 'activitypartcipants', 'activity_id', 'user_id');
+    }
+
 }

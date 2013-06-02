@@ -45,11 +45,15 @@ class ActivityController extends \BaseController {
      */
     public function store()
     {
+         $equipments = [];
         $input = Input::all();
 
         $input['user_id'] = Auth::user()->id;
-        $equipments = $input['equipment'];
-        unset($input['equipment']);
+        if (array_key_exists('equipment', $input)) {
+             $equipments = $input['equipment'];
+            unset($input['equipment']);
+        }
+       
 
         $validation = Validator::make($input, Activity::$rules);
 
@@ -84,7 +88,7 @@ class ActivityController extends \BaseController {
     {
         $activity = $this->activity->findOrFail($id);
 
-        return View::make('activity.show', compact('activity'));
+        return View::make('activities.show', compact('activity'));
     }
 
     /**
@@ -151,6 +155,23 @@ class ActivityController extends \BaseController {
         $activities = $this->activity->all();
 
         return View::make('activities.find', compact('activities'));
+    }
+
+    /**
+     * Allow a user to join an activity
+     */
+    public function getJoin($activityId)
+    {
+        $userId = Auth::user()->id;
+        $activity = $this->activity->find($activityId);
+
+        //$currentUsers =  $activity->labels()->pivot()->lists('label_id');
+        if (!$activity->participants->contains($userId)) {
+             $activity->participants()->attach($userId);
+        }
+       
+
+        return Redirect::to('/activity/'.$activityId);
     }
 
     public function getMarkers($postcode)

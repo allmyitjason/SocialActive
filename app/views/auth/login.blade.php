@@ -9,7 +9,7 @@
       <div class="row">
         <div class="span12">
           <h2 class="pull-left"><i class="icon-arrow-right title-icon"></i> Login</h2>
-          <div class="pull-right heading-meta">This Is <span class="lightblue">Meta</span>. Write <span class="lightblue">Something</span> Here</div>
+          <div class="pull-right heading-meta"></div>
         </div>
       </div>
     </div>
@@ -20,15 +20,10 @@
  <div class="container">
  	      <div class="register">
               <div class="row">
-                <div class="span6">
-                  <h2>Register Today</h2>
-                  <p class="big grey">Morbi tincidunt posuere turpis eu laoreet</p>
-                  <p>Nullam in est urna. In vitae adipiscing enim. Curabitur rhoncus condimentum lorem, non convallis dolor faucibus eget. In vitae adipiscing enim. Curabitur rhoncus condimentum lorem, non convallis dolor faucibus eget. In ut nulla est. </p>
-                  <p>Nullam in est urna. In vitae adipiscing enim. In ut nulla est. Nullam in est urna. In vitae adipiscing enim. Curabitur rhoncus condimentum lorem, non convallis dolor faucibus eget. In ut nulla est. </p>
 
-                </div>
 
-                <div class="span6">
+
+                <div class="span6 offset3 ">
                   <div id="login-box">
 
 					<!-- start: Row -->
@@ -50,6 +45,8 @@
 								<div class="img"><i class="icon-twitter"></i></div>
 								<div class="text">Login with Twitter</div>
 							</a>
+
+
 
 							<div class="page-title-small">
 
@@ -81,7 +78,8 @@
 
 								<div class="actions">
 
-									<button type="submit" class="btn btn-primary span12">Login!</button>
+									<button type="submit" class="btn btn-primary span12">Login!</button><br /><br />
+									<a style='margin-left:0px' class="btn btn-warning span12" href='/register'>Create an new account</a>
 
 								</div>
 

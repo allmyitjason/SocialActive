@@ -71,7 +71,7 @@ class HomeController extends \BaseController {
 			$event->setHandle('function(){showActivityDetails('.$activity->id.');}');
 
 			$map->getEventManager()->addDomEvent($event);
-			//$map->addMarker($marker);
+			$map->addMarker($marker);
 
 		}
 

@@ -80,65 +80,97 @@ $("#activityType_id").change(function() {
 @stop
 
 @section('content')
-<div class="content">
-<div class="container">
-<div class="row-fluid">
-    <div class="box span12">
-        <div class="box-header">
-            <h2><i class="icon-list-alt"></i><span class="break"></span>Create Activity</h2>
+<div class="page-heading blightblue">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h2 class="pull-left"><i class="icon-arrow-right title-icon"></i> Host an Activity</h2>
+          <div class="pull-right heading-meta"><span class="lightblue">Anyone</span> can host an activity!</div>
         </div>
-        <div class="box-content">
-            {{Former::open('/activity')->id('create_activity')}}
-            {{Former::select('activityType_id', 'Type')->fromQuery(ActivityType::all(), 'type')->placeholder('Select')}}
-            {{Former::select('equipment[]', 'Select Equipment', null, null, ['multiple'])->id('equipment')}}
-            {{Former::select('gender_id', 'Gender')->fromQuery(Gender::all(), 'gender', 'id')->value(3)}}
-            {{Former::select('venue_id', 'Venue')->fromQuery(Venue::all(), 'name', 'id')->placeholder('Select')}}
-            
-            <div class="control-group">
-                <label class="control-label">Skill Level</label>
-                <div class="controls">
-                    <div class='js-skill-level-slider form-slider'></div>
-                    <div class='js-skill-level-slider-label'></div>
-                </div>
-            </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page heading ends -->
+    <!-- Content starts -->
+  <div class="content">
+ <div class="container">
 
-             <div class="control-group">
-                <label class="control-label">Participants</label>
-                <div class="controls">
-                    <div class='js-participants-slider form-slider'></div>
-                    <div class='js-participants-slider-label'>Minimum of 4 People  |  Maximum of 7 People</div>
-                </div>
-            </div>
 
-             <div class="control-group">
-                <label class="control-label">Age</label>
-                <div class="controls">
-                    <div class='js-age-slider form-slider'></div>
-                    <div class='js-age-slider-label'>All Ages</div>
-                </div>
-            </div>
-            
-            {{Former::date('activityDate')}}
+<div class="row-fluid" id='create-activity'>
+    {{Former::open('/activity')->id('create_activity')}}
 
-            <div class="control-group">
-                <label class="control-label">Duration</label>
-                <div class="controls">
-                    <div class='js-duration-slider form-slider'></div>
-                    <div class='js-duration-slider-label'>30 Minutes (0.5 Hours)</div>
-                </div>
-            </div>
-
-            {{Former::hidden('minSkillLevel_id')->value(1)}}
-            {{Former::hidden('maxSkillLevel_id')->value(5)}}
-            {{Former::hidden('minParticipants')->value(4)}}
-            {{Former::hidden('maxParticipants')->value(7)}}
-            {{Former::hidden('minAge')->value(5)}}
-            {{Former::hidden('maxAge')->value(90)}}
-            {{Former::hidden('activityDurationMins')->value(30)}}
-            {{Former::submit('Create')}}
-            {{Former::close()}}
-        
+    <div class="row-fluid">
+        <div class="span12" style='text-align:center;'>
+            <h3>Fill out the form below to host a new activity in your area.</h3>
         </div>
+    </div>
+<br />
+    <div class="row-fluid">
+
+
+        <div class="box offset2 span4">
+            
+                
+                {{Former::select('activityType_id', 'Type')->fromQuery(ActivityType::all(), 'type')->placeholder('Select')}}
+                {{Former::select('equipment[]', 'Select Equipment', null, null, ['multiple'])->id('equipment')}}
+                {{Former::select('gender_id', 'Gender')->fromQuery(Gender::all(), 'gender', 'id')->value(3)}}
+                {{Former::select('venue_id', 'Venue')->fromQuery(Venue::all(), 'name', 'id')->placeholder('Select')}}
+                   
+        </div>
+
+            <div class="span6">
+                <div class="control-group">
+                    <label class="control-label">Skill Level</label>
+                    <div class="controls">
+                        <div class='js-skill-level-slider form-slider'></div>
+                        <div class='js-skill-level-slider-label'></div>
+                    </div>
+                </div>
+
+                 <div class="control-group">
+                    <label class="control-label">Participants</label>
+                    <div class="controls">
+                        <div class='js-participants-slider form-slider'></div>
+                        <div class='js-participants-slider-label'>Minimum of 4 People  |  Maximum of 7 People</div>
+                    </div>
+                </div>
+
+                 <div class="control-group">
+                    <label class="control-label">Age</label>
+                    <div class="controls">
+                        <div class='js-age-slider form-slider'></div>
+                        <div class='js-age-slider-label'>All Ages</div>
+                    </div>
+                </div>
+                
+                {{Former::date('activityDate')}}
+
+                <div class="control-group">
+                    <label class="control-label">Duration</label>
+                    <div class="controls">
+                        <div class='js-duration-slider form-slider'></div>
+                        <div class='js-duration-slider-label'>30 Minutes (0.5 Hours)</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+                 {{Former::submit('Create')->class('btn btn-primary')}}
+                 <a href='/' class='btn'>Cancel</a>
+            </div>
+
+             {{Former::hidden('minSkillLevel_id')->value(1)}}
+                {{Former::hidden('maxSkillLevel_id')->value(5)}}
+                {{Former::hidden('minParticipants')->value(4)}}
+                {{Former::hidden('maxParticipants')->value(7)}}
+                {{Former::hidden('minAge')->value(5)}}
+                {{Former::hidden('maxAge')->value(90)}}
+                {{Former::hidden('activityDurationMins')->value(30)}}
+               
+                {{Former::close()}}
+            
+
     </div>
 </div>
 </div>
