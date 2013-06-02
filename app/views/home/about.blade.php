@@ -36,7 +36,7 @@
 
               <div class="page-title-small">
 
-               
+               <img src='/img/unleashed.jpg' />
 
               </div>
 

@@ -166,7 +166,7 @@
 
       <div class="span12">
           <div class="copy">
-                <p>Copyright &copy; <a href="#">Your Site</a> - <a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> | <a href="faq.html">FAQ</a> | <a href="contactus.html">Contact Us</a></p>
+                <p>Copyright &copy; <a href="#">SocialActive</a> - <a href="/">Home</a> | <a href="about">About Us</a> | <a href="contact">Contact Us</a></p>
           </div>
       </div>
 
