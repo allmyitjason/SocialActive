@@ -30,6 +30,6 @@ class CreateActivityTypeEquipmentTable extends Migration
     */
     public function down()
     {
-        Schema::drop('activities_equipment');
+        Schema::drop('activity_type_equipment');
     }
 }
