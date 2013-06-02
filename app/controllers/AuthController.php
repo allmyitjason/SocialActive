@@ -35,7 +35,7 @@ class AuthController extends SportBaseController {
 
 			if ($localUser) {
 				Auth::loginUsingId($localUser->id);
-				return Redirect::to('/dashboard');
+				return Redirect::to('/');
 			}
 
 			//Store the facebook id in the sessoin so we can get it from the registration form
@@ -65,7 +65,7 @@ class AuthController extends SportBaseController {
 		
 		if(Auth::attempt($input, true))
 		{
-			return Redirect::intended('/dashbaord');
+			return Redirect::intended('/');
 		}
 
 		return Redirect::route('login')->with('error','Incorrect username or password');
