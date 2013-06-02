@@ -35,7 +35,7 @@ Route::post('/contact', function() {
 
 Route::get('/data', function() {
 
-$c = curl_init(); 
+/*$c = curl_init(); 
         curl_setopt($c, CURLOPT_URL, "http://mapiq.dfc.sa.gov.au/mapiq/proxy.ashx?http://DFC_Mapserver/dfc_search/usersearch_xml_NEW.aspx?name=Cricket"); 
         curl_setopt($c, CURLOPT_RETURNTRANSFER, 1); 
         $output = curl_exec($c);  
@@ -43,7 +43,7 @@ $c = curl_init();
        // echo $output;
         $t = new SimpleXMLElement($output);
 print_r($t);die;
-        die;
+        die;*/
     
 
 
@@ -98,8 +98,7 @@ Route::group(array('before' => 'auth'), function()
     Route::get('/activitytype/{id}/equipment', 'ActivityTypeController@getEquipment');
     Route::get('/activity/{id}/json', 'ActivityController@getJson');
    
-
-    Route::get('/find', 'ActivityController@getFind');
+    
 
 	Route::get('/dashboard', function()
 	{
@@ -111,6 +110,9 @@ Route::group(array('before' => 'auth'), function()
 	Route::resource('activity', 'ActivityController');
     Route::resource('activitytype', 'ActivityTypeController');
 });
+
+Route::get('/find', 'ActivityController@getFind');
+Route::controller('/venue', 'VenueController');
 
 Route::get('/suburb/auto-complete', 'SuburbController@getAutoComplete');
 Route::get('/activity/markers/{postcode}', 'ActivityController@getMarkers');

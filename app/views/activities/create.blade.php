@@ -114,7 +114,7 @@ $("#activityType_id").change(function() {
                 {{Former::select('activityType_id', 'Type')->fromQuery(ActivityType::all(), 'type')->placeholder('Select')}}
                 {{Former::select('equipment[]', 'Select Equipment', null, null, ['multiple'])->id('equipment')}}
                 {{Former::select('gender_id', 'Gender')->fromQuery(Gender::all(), 'gender', 'id')->value(3)}}
-                {{Former::select('venue_id', 'Venue')->fromQuery(Venue::all(), 'name', 'id')->placeholder('Select')}}
+                {{Former::select('venue_id', 'Venue')->fromQuery(Venue::all(), 'name', 'id')->selected(Session::get('venueId', 0))->prepend('<a href="/venue">Search</a>')}}
                    
         </div>
 

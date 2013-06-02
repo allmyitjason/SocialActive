@@ -25,4 +25,9 @@ Class Venue extends Eloquent
         return $this->hasMany('Suburb');
     }
 
+    public function type()
+    {
+        return $this->belongsToMany('ActivityType');
+    }
+
 }
