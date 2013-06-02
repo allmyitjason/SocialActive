@@ -52,8 +52,8 @@ class GenericTableSeeder extends Seeder {
         ]);
 
         DB::table('venues')->insert([
-            ['name' => 'Oval (North Tce)', 'address' => '123 Fake St', 'longitude' => -34.925806, 'latitude' => 138.605073],
-            ['name' => 'Oval (Pirie St)', 'address' => '123 Fake St', 'longitude' => -34.925303, 'latitude' => 138.607296]
+            ['name' => 'Oval (North Tce)', 'address' => '123 Fake St', 'longitude' => 138.605073, 'latitude' => -34.925806],
+            ['name' => 'Oval (Pirie St)', 'address' => '123 Fake St', 'longitude' => 138.607296, 'latitude' => -34.925303]
         ]);
 
         DB::table('suburbs')->insert([
