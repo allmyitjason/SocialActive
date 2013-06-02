@@ -18,7 +18,12 @@ class GenericTableSeeder extends Seeder {
         DB::table('activitytypes')->insert([
         	['type' => 'Cricket', 'description' => 'Indoor Cricket', 'icon' => 'cricket.png'],
         	['type' => 'Tennis', 'description' => '', 'icon' => 'tennis.png'],
-        	['type' => 'Fishing', 'description' => 'Jetty', 'icon' => 'fishing.png'],
+        	['type' => 'Basketball', 'description' => 'Jetty', 'icon' => 'basketball.png'],
+            ['type' => 'Archery', 'description' => 'Jetty', 'icon' => 'archery.png'],
+            ['type' => 'Shooting', 'description' => 'Jetty', 'icon' => 'shooting.png'],
+            ['type' => 'Soccer', 'description' => 'Jetty', 'icon' => 'soccer.png'],
+            ['type' => 'Football', 'description' => 'Jetty', 'icon' => 'football.png'],
+            ['type' => 'Bowling', 'description' => 'Jetty', 'icon' => 'bowling.png']
         ]);
 
         //Add default equipment links
@@ -52,7 +57,7 @@ class GenericTableSeeder extends Seeder {
         ]);
 
         DB::table('venues')->insert([
-            ['name' => 'Oval (North Tce)', 'address' => '123 Fake St', 'longitude' => 138.605073, 'latitude' => -34.925806],
+            ['name' => 'Western Youth Centre Club', 'address' => '79 Marion Rd Cowandilla SA', 'longitude' => 138.552365, 'latitude' => -34.932142],
             ['name' => 'Oval (Pirie St)', 'address' => '123 Fake St', 'longitude' => 138.607296, 'latitude' => -34.925303]
         ]);
 
@@ -66,8 +71,8 @@ class GenericTableSeeder extends Seeder {
         ]);
 
         DB::table('activities')->insert([
-            ['title' => 'Cricket', 'user_id' => 1, 'activityType_id' => 1, 'minSkillLevel_id' => 2, 'maxSkillLevel_id' => 5, 'gender_id' => 3, 'venue_id' => 1, 'minParticipants' => 4, 'maxParticipants' => 7, 'minAge' => 5, 'maxAge' => 90, 'activityDate' => '2013-06-01', 'activityDurationMins' => 60],
-            ['title' => 'Social Tennis Match', 'user_id' => 1, 'activityType_id' => 1, 'minSkillLevel_id' => 2, 'maxSkillLevel_id' => 5, 'gender_id' => 3, 'venue_id' => 2, 'minParticipants' => 4, 'maxParticipants' => 7, 'minAge' => 5, 'maxAge' => 90, 'activityDate' => '2013-06-01', 'activityDurationMins' => 60]
+            ['title' => 'Cricket', 'user_id' => 1, 'activityType_id' => 1, 'minSkillLevel_id' => 2, 'maxSkillLevel_id' => 5, 'gender_id' => 3, 'venue_id' => 1, 'minParticipants' => 4, 'maxParticipants' => 7, 'minAge' => 25, 'maxAge' => 30, 'activityDate' => '2013-06-01', 'activityDurationMins' => 60],
+            ['title' => 'Social Tennis Match', 'user_id' => 1, 'activityType_id' => 1, 'minSkillLevel_id' => 2, 'maxSkillLevel_id' => 5, 'gender_id' => 3, 'venue_id' => 2, 'minParticipants' => 4, 'maxParticipants' => 7, 'minAge' => 25, 'maxAge' => 30, 'activityDate' => '2013-06-01', 'activityDurationMins' => 60]
         ]);
        
 

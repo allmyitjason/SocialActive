@@ -33,7 +33,39 @@ Route::post('/contact', function() {
 });
 
 
+Route::get('/data', function() {
 
+$c = curl_init(); 
+        curl_setopt($c, CURLOPT_URL, "http://mapiq.dfc.sa.gov.au/mapiq/proxy.ashx?http://DFC_Mapserver/dfc_search/usersearch_xml_NEW.aspx?name=Cricket"); 
+        curl_setopt($c, CURLOPT_RETURNTRANSFER, 1); 
+        $output = curl_exec($c);  
+        curl_close($c); 
+       // echo $output;
+        $t = new SimpleXMLElement($output);
+print_r($t);die;
+        die;
+    
+
+
+   // print_r($output);die;
+    foreach (ActivityType::all() as $type) {
+        $c = curl_init(); 
+        curl_setopt($c, CURLOPT_URL, "http://mapiq.dfc.sa.gov.au/mapiq/proxy.ashx?http://DFC_Mapserver/dfc_search/usersearch_xml_NEW.aspx?name=".$type->type); 
+        curl_setopt($c, CURLOPT_RETURNTRANSFER, 1); 
+        $output = curl_exec($c);  
+        curl_close($c); 
+       // echo $output;
+        $t = new SimpleXMLElement($output);
+//print_r($t);die;
+        foreach ($t->table->record as $r) {
+            $venue = new Venue();
+            $venue->address = $r->GeocodeAddress;
+            $venue->name = $r->ORGANIZATI;
+            $venue->save();
+        }
+        
+    }
+});
 
 
 Route::get('/activity/{id}/equipment', 'ActivityController@getEquipment');

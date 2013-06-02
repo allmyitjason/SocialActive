@@ -23,6 +23,7 @@ class CreateVenuesTable extends Migration
             $table->string('phone', 45);
             $table->string('contactName', 45);
             $table->integer('verified');
+            $table->timestamps();
         });
     }
 

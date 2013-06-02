@@ -11,8 +11,8 @@ function showActivityDetails(id) {
 
         $('#activity-details .title').html(data.title);
         $('#activity-details .host').html(data.host.firstName);
-        $('#activity-details .age').html(data.minAge);
-        $('#activity-details .address').html(data.venue.address);
+        $('#activity-details .age').html(data.minAge+ " to "+ data.maxAge);
+        $('#activity-details .address').html(data.venue.name+ "<br />" + data.venue.address);
         $('#activity-details .more').css('display', 'block');
         $('#activity-details .more').attr('href', '/activity/'+id);
   });
@@ -145,7 +145,7 @@ $( "#suburbs" ).autocomplete({
 
                 <h4>Host</h4>
                 <span class='host'>&nbsp;</span>
-                <h4>Age</h4>
+                <h4>Age Group</h4>
                 <span class='age'>&nbsp;</span>
                 <h4>Activity Address</h4>
                 <span class='address'>&nbsp;</span>
